@@ -4,6 +4,12 @@ server:
   port: 8888
 
 spring:
+  # 数据库连接配置
+  datasource:
+    url:  jdbc:mysql://106.13.45.1:3306/friend_system?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: amigo
+    driver-class-name: com.mysql.cj.jdbc.Driver
   #mvc配置
   mvc:
     view:

@@ -19,6 +19,7 @@
     </properties>
 
     <dependencies>
+<!--*****  V1.0  ****************************************************************************-->
         <!--  spring-boot基本类      -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -36,6 +37,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+<!--*****  V1.1  ****************************************************************************-->
         <!--  spring-boot-web默认内嵌tomcat    -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -52,6 +54,26 @@
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <scope>compile</scope>
+        </dependency>
+<!--*****  V1.2  ****************************************************************************-->
+        <!--mysql连接器-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.19</version>
+        </dependency>
+        <!--  springboot集成mybatis      -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+        <!--  lombok语法糖      -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
