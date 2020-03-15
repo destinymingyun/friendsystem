@@ -1,0 +1,14 @@
+/**
+ * @author PQ
+ * @Description 常用样式
+ * @Date 上午12:55 16/3/2020
+ * @version 1.1
+**/
+html {
+    font-family: "微软雅黑";
+}
+
+.normal-width {
+    width: 1180px;
+    margin: 0 auto;
+}

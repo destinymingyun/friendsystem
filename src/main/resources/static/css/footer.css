@@ -1,0 +1,28 @@
+/**
+ * @author PQ
+ * @Description 页尾样式
+ * @Date 上午12:53 16/3/2020
+ * @version 1.1
+**/
+.footer {
+    background: #212B30;
+}
+
+.footer > .footer-items {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #707070;
+}
+
+.footer-items a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+.footer-items a:hover {
+    color: #26c6da;
+}
+

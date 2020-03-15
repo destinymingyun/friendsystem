@@ -1,0 +1,12 @@
+#服务器设定
+server:
+  # 端口设定
+  port: 8888
+
+spring:
+  #mvc配置
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /WEB-INF/
+    static-path-pattern: /static/**
