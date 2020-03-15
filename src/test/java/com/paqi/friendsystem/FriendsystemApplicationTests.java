@@ -8,6 +8,9 @@ class FriendsystemApplicationTests {
 
     @Test
     void contextLoads() {
+
     }
+
+
 
 }

@@ -17,4 +17,5 @@ public class Account {
     private int userId;
     private String account;
     private String password;
+    private int userType;
 }
