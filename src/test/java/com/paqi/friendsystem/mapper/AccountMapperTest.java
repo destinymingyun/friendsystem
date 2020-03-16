@@ -27,11 +27,12 @@ public class AccountMapperTest {
     @Test
     public void testPostAccount() {
         Account account = new Account();
-        account.setAccount("test1");
+        account.setAccount("test3");
         account.setPassword("test");
         account.setUserType(1);
         int ret = accountMapper.postAccount(account);
-        Assertions.assertEquals( 1, ret);
+        System.out.println("ret = " + ret);
+//        Assertions.assertEquals( 1, ret);
     }
 
     /**
@@ -48,5 +49,18 @@ public class AccountMapperTest {
         account.setUserType(1);
         int userId = accountMapper.getUserIdByAccountAndPassword(account);
         Assertions.assertEquals(1, userId);
+    }
+
+    /**
+     * @author PQ
+     * @Description 测试根据账户返回用户id
+     * @Date 下午4:25 16/3/2020
+     * @version 2.1.1
+    **/
+    @Test
+    public void testUserIdByAccount() {
+        String account = "test1";
+        int userId = accountMapper.getUserIdByAccount(account);
+        Assertions.assertEquals(5, userId);
     }
 }

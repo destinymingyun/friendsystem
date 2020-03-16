@@ -39,6 +39,12 @@ public class UserInfoMapperTest {
         Assertions.assertEquals(ret, 1);
     }
 
+    /**
+     * @author PQ
+     * @Description 测试用户根据id获取信息
+     * @Date 下午4:28 16/3/2020
+     * @version 2.0.3
+    **/
     @Test
     public void testGetUserInfoById() {
         int userId = 1;

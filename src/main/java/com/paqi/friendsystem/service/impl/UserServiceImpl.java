@@ -1,7 +1,9 @@
 package com.paqi.friendsystem.service.impl;
 
 import com.paqi.friendsystem.entity.user.Account;
+import com.paqi.friendsystem.entity.user.UserInfo;
 import com.paqi.friendsystem.mapper.AccountMapper;
+import com.paqi.friendsystem.mapper.UserInfoMapper;
 import com.paqi.friendsystem.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +18,8 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService {
     @Autowired
     private AccountMapper accountMapper;
+    @Autowired
+    private UserInfoMapper userInfoMapper;
 
     /**
      * @author PQ
@@ -26,5 +30,35 @@ public class UserServiceImpl implements UserService {
     @Override
     public int login(Account account) {
         return accountMapper.getUserIdByAccountAndPassword(account);
+    }
+
+    /**
+     * @author PQ
+     * @Description 注册服务
+     * @Date 下午4:00 16/3/2020
+     * @version 2.1.1
+    **/
+    @Override
+    public int registerAccount(Account account, UserInfo userInfo) {
+        accountMapper.postAccount(account);
+        userInfo.setUserId(account.getUserId());
+        userInfoMapper.postUserInfo(userInfo);
+        return account.getUserId();
+    }
+
+    /**
+     * @author PQ
+     * @Description 检查用户账户是否重复
+     * @Date 下午4:30 16/3/2020
+     * @version
+    **/
+    @Override
+    public boolean checkAccountRepeat(String account) {
+        int userId = accountMapper.getUserIdByAccount(account);
+        if (userId == 0) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }

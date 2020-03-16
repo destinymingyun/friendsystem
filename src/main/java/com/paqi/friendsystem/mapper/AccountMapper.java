@@ -19,12 +19,12 @@ public interface AccountMapper {
      * @author PQ
      * @Description 向account表插入一条新记录
      * @param account:账号实体类，仅填写account和password
-     * @return 受影响的行数
+     * @return userId
      * @Date 上午2:22 16/3/2020
      * @version 2.0
     **/
-    @Options(useGeneratedKeys = true, keyProperty = "userId", keyColumn = "user_id")
     @Insert("INSERT INTO `account`(`account`, `password`, `user_type`) VALUES(#{account}, #{password}, #{userType})")
+    @Options(useGeneratedKeys = true, keyProperty = "userId", keyColumn = "user_id")
     int postAccount(Account account);
 
     /**
@@ -38,4 +38,16 @@ public interface AccountMapper {
     **/
     @Select("SELECT `user_id` FROM `account` WHERE `account` = #{account} AND `password` = #{password}")
     int getUserIdByAccountAndPassword(Account account);
+
+    /**
+     * 根据用户账户返回用户id
+     * @author PQ
+     * @Description
+     * @param account：用户账户
+     * @return 用户id
+     * @Date 下午4:23 16/3/2020
+     * @version 2.1.2
+    **/
+    @Select("SELECT `user_id` FROM `account` WHERE `account` = #{account}")
+    int getUserIdByAccount(String account);
 }
