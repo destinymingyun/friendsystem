@@ -26,7 +26,10 @@ public class AccountMapperTest {
     **/
     @Test
     public void testPostAccount() {
-        Account account = Account.builder().account("test1").password("test").userType(1).build();
+        Account account = new Account();
+        account.setAccount("test1");
+        account.setPassword("test");
+        account.setUserType(1);
         int ret = accountMapper.postAccount(account);
         Assertions.assertEquals( 1, ret);
     }
@@ -39,7 +42,10 @@ public class AccountMapperTest {
     **/
     @Test
     public void testGetUserIdByAccountAndPassword() {
-        Account account = Account.builder().account("test1").password("test").build();
+        Account account = new Account();
+        account.setAccount("test1");
+        account.setPassword("test");
+        account.setUserType(1);
         int userId = accountMapper.getUserIdByAccountAndPassword(account);
         Assertions.assertEquals(1, userId);
     }

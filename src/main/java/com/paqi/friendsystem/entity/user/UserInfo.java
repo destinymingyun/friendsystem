@@ -2,7 +2,6 @@ package com.paqi.friendsystem.entity.user;
 
 import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
 
 /**
  * @author PQ
@@ -11,8 +10,6 @@ import lombok.ToString;
  * @version 1.2.0
 **/
 @Data
-@ToString
-@Builder
 public class UserInfo {
     private int userId;
     private String userName;

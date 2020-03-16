@@ -11,8 +11,7 @@ import lombok.ToString;
  * @version 1.2.0
 **/
 @Data
-@Builder
-@ToString
+
 public class Account {
     private int userId;
     private String account;

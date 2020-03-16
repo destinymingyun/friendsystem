@@ -4,6 +4,7 @@ import com.paqi.friendsystem.entity.user.UserInfo;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.Select;
 
 /**
  * @author PQ
@@ -25,4 +26,16 @@ public interface UserInfoMapper {
     @Insert("INSERT INTO `user_info` (`user_id`, `sex`, `username`, `introduction`, `hobby`, `job`, `age`, `real_name`)" +
             " VALUES (#{userId}, #{sex}, #{userName}, #{introduction}, #{hobby}, #{job}, #{age}, #{realName})")
     int postUserInfo(UserInfo userInfo);
+
+    /**
+     * 根据用户id查询用户基本信息
+     * @author PQ
+     * @Description 根据用户id查询信息
+     * @param userId：用户id，唯一标识符
+     * @return 返回该用户基本信息
+     * @Date 下午12:46 16/3/2020
+     * @version 2.03
+    **/
+    @Select("SELECT `*` FROM `user_info` WHERE `user_id` = ${userId}")
+    UserInfo getUserInfoById(int userId);
 }
