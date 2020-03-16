@@ -5,17 +5,21 @@
  * @version 2.3.0
 **/
 
+input,button {
+    outline: none;
+}
+
 .input-box {
     position: relative;
     margin-bottom: 20px;
 }
 
 .input-box img {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    left: 0;
-}
+     position: absolute;
+     width: 30px;
+     height: 30px;
+     left: 0;
+ }
 
 .input {
     width: 100%;
@@ -33,7 +37,7 @@
     color: #222222;
     border: #26c6da 2px solid;
     font-weight: bold;
-    transition: 2s;
+    transition: 1s;
     font-weight: bold;
     font-size: 20px;
 }
@@ -41,4 +45,20 @@
 .button-submit:hover {
     background: #19abbd;
     color: white;
+}
+
+.radio-box {
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.radio-box > label > img {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+.radio-box > label > input {
+    height: 30px;
 }

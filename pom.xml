@@ -82,7 +82,12 @@
             <version>2.2.5.RELEASE</version>
             <optional>true</optional>
         </dependency>
-
+<!--*****  V2.3.1  热部署开发****************************************************************************-->
+        <dependency>
+            <groupId>org.webjars.bower</groupId>
+            <artifactId>jquery</artifactId>
+            <version>3.4.1</version>
+        </dependency>
     </dependencies>
 
     <build>

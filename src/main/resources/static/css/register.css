@@ -1,0 +1,76 @@
+/**
+ * @author PQ
+ * @Description 注册页面样式
+ * @Date 上午12:04 17/3/2020
+ * @version
+**/
+html {
+    height: 100%;
+    background-image: url("/static/img/login-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: gray 2px 2px 5px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: gray 1px 1px 3px;
+    margin-bottom: 30px;
+}
+
+hr {
+    margin-bottom: 10px;
+}
+
+.register-width {
+    width: 600px;
+}
+
+.register-box {
+    margin: 100px auto;
+    border: #19abbd 2px solid;
+}
+
+.logo img{
+    display: block;
+    width: 65px;
+    height: 65px;
+    margin: 30px auto 10px auto;
+}
+
+.input-box > label > span {
+    display: inline-block;
+    position: absolute;
+    height: 26px;
+    left: 20px;
+    bottom: 0px;
+}
+
+.radio-box > span {
+    margin-left: 20px;
+}
+
+.other {
+    margin: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.other > a {
+    color: gray;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.other > a:hover {
+    color: #26c6da;
+    text-shadow: #26c6da 1px 1px 3px;
+}

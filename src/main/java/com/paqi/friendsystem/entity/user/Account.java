@@ -11,7 +11,6 @@ import lombok.ToString;
  * @version 1.2.0
 **/
 @Data
-
 public class Account {
     private int userId;
     private String account;

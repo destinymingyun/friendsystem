@@ -35,14 +35,16 @@
                 </label>
             </div>
         </div>
-        <div>
+        <div style="margin-top: 50px">
             <button class="button-submit login-width">登录</button>
         </div>
+        <br>
         <div class="other">
-            <a href="#">没有账户？注册</a>
-            <a href="#">忘记密码？找回</a>
+            <a href="/view/register">没有账户？注册</a>
+            <a href="/view/">忘记密码？找回</a>
         </div>
     </div>
 </main>
+<script type="text/javascript" src="/webjars/jquery/3.4.1/dist/jquery.js"></script>
 </body>
 </html>
