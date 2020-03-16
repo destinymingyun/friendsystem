@@ -1,4 +1,4 @@
-package com.paqi.friendsystem.mappertest;
+package com.paqi.friendsystem.mapper;
 
 import com.paqi.friendsystem.entity.user.Account;
 import org.apache.ibatis.annotations.Insert;

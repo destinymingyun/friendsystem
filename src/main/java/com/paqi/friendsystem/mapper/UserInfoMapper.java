@@ -1,9 +1,8 @@
-package com.paqi.friendsystem.mappertest;
+package com.paqi.friendsystem.mapper;
 
 import com.paqi.friendsystem.entity.user.UserInfo;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 
 /**
