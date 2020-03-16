@@ -2,6 +2,11 @@
 server:
   # 端口设定
   port: 8888
+  #配置JSP热部署
+  servlet:
+    jsp:
+      init-parameters:
+        development: true
 
 spring:
   # 数据库连接配置
@@ -16,3 +21,7 @@ spring:
       suffix: .jsp
       prefix: /WEB-INF/
     static-path-pattern: /static/**
+  #开启sping热部署
+  devtools:
+    restart:
+      enabled: true

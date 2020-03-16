@@ -8,9 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>登录</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/static/img/logo.png" />
 </head>
 <body>
-this is login
+this is login123
 </body>
 </html>
