@@ -23,4 +23,26 @@ public class ViewController {
     public String index() {
         return "./index";
     }
+
+    /**
+     * @author PQ
+     * @Description 登录业映射
+     * @Date 下午4:42 16/3/2020
+     * @version 2.2.0
+    **/
+    @GetMapping("/login")
+    public String login() {
+        return "./login";
+    }
+
+    /**
+     * @author PQ
+     * @Description
+     * @Date 下午4:43 16/3/2020
+     * @version 2.2.0
+    **/
+    @GetMapping("/register")
+    public String register() {
+        return "./register";
+    }
 }
