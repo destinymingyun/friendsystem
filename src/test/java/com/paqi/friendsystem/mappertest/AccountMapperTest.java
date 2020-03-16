@@ -30,4 +30,17 @@ public class AccountMapperTest {
         int ret = accountMapper.postAccount(account);
         Assertions.assertEquals( 1, ret);
     }
+
+    /**
+     * @author PQ
+     * @Description 测试根据账户或密码查询是否正确
+     * @Date 上午11:34 16/3/2020
+     * @version 2.0.1
+    **/
+    @Test
+    public void testGetUserIdByAccountAndPassword() {
+        Account account = Account.builder().account("test1").password("test").build();
+        int userId = accountMapper.getUserIdByAccountAndPassword(account);
+        Assertions.assertEquals(1, userId);
+    }
 }
