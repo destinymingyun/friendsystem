@@ -1,0 +1,44 @@
+/**
+ * @author PQ
+ * @Description 设置form常用样式
+ * @Date 下午6:13 16/3/2020
+ * @version 2.3.0
+**/
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box img {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 0;
+}
+
+.input {
+    width: 100%;
+    height: 30px;
+    border: #efefef;
+    border-bottom: 2px #222222 solid;
+    text-align: center;
+    background-color: transparent;
+}
+
+.button-submit {
+    height: 36px;
+    background: transparent;
+    border-radius: 18px;
+    color: #222222;
+    border: #26c6da 2px solid;
+    font-weight: bold;
+    transition: 2s;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.button-submit:hover {
+    background: #19abbd;
+    color: white;
+}

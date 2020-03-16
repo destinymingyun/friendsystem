@@ -1,0 +1,48 @@
+/**
+ * @author PQ
+ * @Description 控制登录样式
+ * @Date 下午5:11 16/3/2020
+ * @version 2.
+**/
+html {
+    height: 100%;
+    background-image: url("/static/img/login-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+main {
+    margin: 200px auto;
+    width: 400px;
+    background: rgba(255,255,255,0.3);
+    border: #26c6da 1px solid;
+    box-shadow: black 2px 2px 5px;
+}
+
+.login-width {
+    width: 400px;
+}
+
+.logo img{
+    display: block;
+    width: 65px;
+    height: 65px;
+    margin: 30px auto;
+}
+
+.other {
+    margin: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.other > a {
+    color: gray;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.other > a:hover {
+    color: #26c6da;
+    text-shadow: #26c6da 1px 1px 3px;
+}
