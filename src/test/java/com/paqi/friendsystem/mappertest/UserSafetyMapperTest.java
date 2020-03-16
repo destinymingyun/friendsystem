@@ -24,7 +24,7 @@ public class UserSafetyMapperTest {
      * @version 2.0.4
     **/
     @Test
-    public void testPostUserSafetyMapper() {
+    public void testPostUserSafety() {
         UserSafety userSafety = new UserSafety();
         userSafety.setUserId(1);
         userSafety.setQuestion1("q1");
@@ -35,5 +35,22 @@ public class UserSafetyMapperTest {
         userSafety.setAnswer3("a3");
         int ret = userSafetyMapper.postUserMSafety(userSafety);
         Assertions.assertEquals(1, ret);
+    }
+
+    /**
+     * @author PQ
+     * @Description 测试获取用户安全是否可行
+     * @Date 下午2:27 16/3/2020
+     * @version 2.0.5
+    **/
+    @Test
+    public void testGetUserSafety() {
+        int userId = 1;
+        UserSafety userSafety = userSafetyMapper.getUserSafety(userId);
+        boolean ret = false;
+        if (userSafety != null) {
+            ret = true;
+        }
+        Assertions.assertEquals(true, ret);
     }
 }
