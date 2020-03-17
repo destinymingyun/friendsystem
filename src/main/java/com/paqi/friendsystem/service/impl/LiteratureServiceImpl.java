@@ -1,0 +1,48 @@
+package com.paqi.friendsystem.service.impl;
+
+import com.paqi.friendsystem.entity.Literature;
+import com.paqi.friendsystem.mapper.LiteratureMapper;
+import com.paqi.friendsystem.service.LiteratureService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+/**
+ * @author PQ
+ * @Description 文章服务类
+ * @Date 下午7:07 17/3/2020
+ * @version 3.3.0
+**/
+@Service
+public class LiteratureServiceImpl implements LiteratureService {
+    @Autowired
+    private LiteratureMapper literatureMapper;
+    /**
+     * @author PQ
+     * @Description 添加文章
+     * @Date 下午7:58 17/3/2020
+     * @version 3.3.0
+    **/
+    @Override
+    public int addLiterature(Literature literature) {
+        literatureMapper.postLiterature(literature);
+        return literature.getLiteratureId();
+    }
+
+    /**
+     * @author PQ
+     * @Description 根据文章id删除一篇文章
+     * @Date 下午9:27 17/3/2020
+     * @version 3.3.0
+    **/
+    @Override
+    public boolean deleteLiterature(int literatureId) {
+        int ret = literatureMapper.deleteLiterature(literatureId);
+        if (ret != 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+}

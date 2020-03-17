@@ -15,6 +15,7 @@ public class Fun {
     private int funId;
     private String funName;
     private int builderId;
+    private int ownerId;
     private long memberNum;
     private long literatureNum;
     private Date createTime;

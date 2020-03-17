@@ -23,7 +23,7 @@ public class LiteratureMapperTest {
      * @author PQ
      * @Description 文章测试类
      * @Date 下午1:11 17/3/2020
-     * @version
+     * @version 3.2.0
     **/
     @Test
     public void testPostLiterature() {
@@ -35,5 +35,18 @@ public class LiteratureMapperTest {
         literature.setCreateTime(new Date());
         int ret = literatureMapper.postLiterature(literature);
         Assertions.assertEquals(1, ret);
+    }
+
+    /**
+     * @author PQ
+     * @Description 测试删除文章
+     * @Date 下午8:23 17/3/2020
+     * @version 3.3.0
+     **/
+    @Test
+    public void testDeleteLiteratureService() {
+        int literatureId = 12;
+        int ret = literatureMapper.deleteLiterature(literatureId);
+        Assertions.assertNotEquals(0, ret);
     }
 }

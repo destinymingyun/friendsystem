@@ -36,4 +36,19 @@ public class FunMapperTest {
         int ret = funMapper.postFun(fun);
         Assertions.assertEquals(1, ret);
     }
+
+    /**
+     * @author PQ
+     * @Description 测试更新拥有者id
+     * @Date 下午10:59 17/3/2020
+     * @version 3.3.0
+    **/
+    @Test
+    public void testPutOwnerId() {
+        int oldUserId = 5;
+        int newUserId = 6;
+        int funId = 2;
+        int ret = funMapper.putOwnerIdByOldOwnerIdAndFunId(oldUserId, newUserId, funId);
+        Assertions.assertNotEquals(0, ret);
+    }
 }

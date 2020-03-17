@@ -1,6 +1,7 @@
 package com.paqi.friendsystem.mapper;
 
 import com.paqi.friendsystem.entity.Literature;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
@@ -26,4 +27,16 @@ public interface LiteratureMapper {
             "VALUES(#{authorId}, #{title}, #{funId}, #{context}, #{createTime})")
     @Options(useGeneratedKeys = true, keyProperty = "literatureId", keyColumn = "literature_id")
     int postLiterature(Literature literature);
+
+    /**
+     * 删除一篇文章
+     * @author PQ
+     * @Description 删除一篇文章
+     * @param literatureId：文章id
+     * @return 返回影响的行数
+     * @Date 下午8:17 17/3/2020
+     * @version 3.3.0
+    **/
+    @Delete("DELETE FROM `literature` WHERE `literature_id` = ${literatureId}")
+    int deleteLiterature(int literatureId);
 }

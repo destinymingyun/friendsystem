@@ -29,10 +29,23 @@ public class DiscussMapperTest {
     public void testPostDiscussMapper() {
         Discuss discuss = new Discuss();
         discuss.setAuthorId(5);
-        discuss.setLiteratureId(1);
+        discuss.setLiteratureId(10);
         discuss.setContext("这篇文章真好");
         discuss.setCreateTime(new Date());
         int ret = discussMapper.postDiscuss(discuss);
-        Assertions.assertEquals(1, ret);
+        Assertions.assertNotEquals(0, ret);
+    }
+
+    /**
+     * @author PQ
+     * @Description 删除关于某文章评论的测试
+     * @Date 下午8:29 17/3/2020
+     * @version 3.3.0
+    **/
+    @Test
+    public void testDeleteDiscuss() {
+        int literatureId = 1;
+        int ret = discussMapper.deleteDiscussByLiteratureId(literatureId);
+        Assertions.assertNotEquals(0, ret);
     }
 }
