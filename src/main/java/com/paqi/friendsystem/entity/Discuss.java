@@ -2,6 +2,8 @@ package com.paqi.friendsystem.entity;
 
 import lombok.Data;
 
+import java.util.Date;
+
 /**
  * @author PQ
  * @Description 文章评论实体类
@@ -14,5 +16,6 @@ public class Discuss {
     private int authorId;
     private int literatureId;
     private int quoteDiscussId;
-    private int discussContext;
+    private String context;
+    private Date createTime;
 }

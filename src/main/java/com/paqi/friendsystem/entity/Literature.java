@@ -2,6 +2,8 @@ package com.paqi.friendsystem.entity;
 
 import lombok.Data;
 
+import java.util.Date;
+
 /**
  * @author PQ
  * @Description 文章实体类
@@ -12,6 +14,8 @@ import lombok.Data;
 public class Literature {
     private int literatureId;
     private int authorId;
-    private int title;
-    private int context;
+    private int funId;
+    private String title;
+    private String context;
+    private Date createTime;
 }
