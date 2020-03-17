@@ -1,6 +1,5 @@
 package com.paqi.friendsystem.entity.user;
 
-import lombok.Builder;
 import lombok.Data;
 
 /**

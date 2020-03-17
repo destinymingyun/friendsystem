@@ -36,4 +36,19 @@ public class FunServiceTest {
         int funId = funService.createFun(fun);
         Assertions.assertNotEquals(0 ,funId);
     }
+
+    /**
+     * @author PQ
+     * @Description 测试更改兴趣部落拥有者是否可行
+     * @Date 上午12:27 18/3/2020
+     * @version 3.3.1
+    **/
+    @Test
+    public void changeOwnerTest() {
+        int oldUserId = 5;
+        int newUserId = 6;
+        int funId = 2;
+        boolean ret = funService.changeOwner(newUserId, oldUserId, funId);
+        Assertions.assertEquals(true, ret);
+    }
 }

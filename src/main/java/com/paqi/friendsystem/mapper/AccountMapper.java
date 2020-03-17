@@ -1,10 +1,7 @@
 package com.paqi.friendsystem.mapper;
 
 import com.paqi.friendsystem.entity.user.Account;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Options;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 /**
  * @author PQ
@@ -50,4 +47,20 @@ public interface AccountMapper {
     **/
     @Select("SELECT `user_id` FROM `account` WHERE `account` = #{account}")
     int getUserIdByAccount(String account);
+
+    /**
+     * 根据账户和旧密码更新密码
+     * @author PQ
+     * @Description 更改密码
+     * @param account：用户账户
+     * @param oldPassword：旧密码
+     * @param newPassword：新密码
+     * @return 返回受影响的行数
+     * @Date 上午12:39 18/3/2020
+     * @version 3.3.1
+    **/
+    @Update("UPDATE `account` SET `password` = #{newPassword} " +
+            "WHERE `account` = #{account} AND `password` = #{oldPassword}")
+    int putPasswordByAccountAndOldPassword(@Param("account") String account, @Param("oldPassword") String oldPassword,
+                                           @Param("newPassword")String newPassword);
 }

@@ -36,4 +36,16 @@ public class LiteratureServiceTest {
         int ret = literatureService.addLiterature(literature);
         Assertions.assertNotEquals(0, literature);
     }
+
+    /**
+     * @author PQ
+     * @Description 删除指定文章
+     * @Date 上午12:31 18/3/2020
+     * @version 3.3.1
+    **/
+    @Test
+    public void testDeleteLiterature() {
+        int literatureId = 11;
+        literatureService.deleteLiterature(literatureId);
+    }
 }

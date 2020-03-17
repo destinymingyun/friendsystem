@@ -63,4 +63,19 @@ public class AccountMapperTest {
         int userId = accountMapper.getUserIdByAccount(account);
         Assertions.assertEquals(5, userId);
     }
+
+    /**
+     * @author PQ
+     * @Description 修改密码
+     * @Date 上午12:43 18/3/2020
+     * @version 3.3.1
+    **/
+    @Test
+    public void testPutPasswordByAccountAndPassword() {
+        String account = "test1";
+        String oldPassword = "test";
+        String newPassword = "test1";
+        int ret = accountMapper.putPasswordByAccountAndOldPassword(account, oldPassword, newPassword);
+        Assertions.assertEquals(1, ret);
+    }
 }

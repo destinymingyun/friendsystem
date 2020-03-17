@@ -39,6 +39,4 @@ public interface DiscussMapper {
     **/
     @Delete("DELETE FROM `discuss` WHERE `literature_id` = ${literatureId}")
     int deleteDiscussByLiteratureId(int literatureId);
-
-
 }

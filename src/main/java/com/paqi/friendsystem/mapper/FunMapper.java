@@ -30,11 +30,11 @@ public interface FunMapper {
      * @author PQ
      * @Description 更新拥有者id
      * @param oldOwnerId：旧拥有者id
-     * @param funId：新拥有者id
-     * @param
+     * @param newOwnerId：新拥有者id
+     * @param funId：兴趣部落id
      * @return 返回受影响的行数
      * @Date 下午10:51 17/3/2020
-     * @version
+     * @version 3.3.0
     **/
     @Update("UPDATE `fun` SET `owner_id` = #{newOwnerId} " +
             "WHERE `owner_id` = #{oldOwnerId} AND `fun_id` = #{funId}")

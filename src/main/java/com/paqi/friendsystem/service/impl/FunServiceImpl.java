@@ -36,4 +36,20 @@ public class FunServiceImpl implements FunService {
         funMemberMapper.postFunMember(funMember);
         return fun.getFunId();
     }
+
+    /**
+     * @author PQ
+     * @Description 更改兴趣部落拥有者
+     * @Date 上午12:25 18/3/2020
+     * @version 3.3.1
+    **/
+    @Override
+    public boolean changeOwner(int newOwnerId, int oldOwner, int funId) {
+        int ret = funMapper.putOwnerIdByOldOwnerIdAndFunId(oldOwner, newOwnerId, funId);
+        if (ret == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

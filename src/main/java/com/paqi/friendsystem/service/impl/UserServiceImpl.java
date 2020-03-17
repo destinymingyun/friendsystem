@@ -50,7 +50,7 @@ public class UserServiceImpl implements UserService {
      * @author PQ
      * @Description 检查用户账户是否重复
      * @Date 下午4:30 16/3/2020
-     * @version
+     * @version 2.1.1
     **/
     @Override
     public boolean checkAccountRepeat(String account) {
@@ -59,6 +59,22 @@ public class UserServiceImpl implements UserService {
             return false;
         } else {
             return true;
+        }
+    }
+
+    /**
+     * @author PQ
+     * @Description 修改用户密码
+     * @Date 上午12:54 18/3/2020
+     * @version 3.3.1
+    **/
+    @Override
+    public boolean changePassword(String account, String oldPassword, String newPassword) {
+        int ret = accountMapper.putPasswordByAccountAndOldPassword(account, oldPassword, newPassword);
+        if (ret == 1) {
+            return true;
+        } else {
+            return false;
         }
     }
 }

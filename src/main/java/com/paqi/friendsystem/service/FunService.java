@@ -19,4 +19,17 @@ public interface FunService {
      * @version 3.3.0
     **/
     int createFun(Fun fun);
+
+    /**
+     * 更改兴趣部落拥有者
+     * @author PQ
+     * @Description 更改兴趣部落拥有者
+     * @param newOwnerId:新拥有者id
+     * @param oldOwner：旧拥有者id
+     * @param funId：兴趣部落id
+     * @return 返回是否更改成功
+     * @Date 上午12:23 18/3/2020
+     * @version 3.3.1
+    **/
+    boolean changeOwner(int newOwnerId, int oldOwner, int funId);
 }

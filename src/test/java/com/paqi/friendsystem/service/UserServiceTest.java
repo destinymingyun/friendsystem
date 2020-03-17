@@ -69,4 +69,19 @@ public class UserServiceTest {
         boolean ret = userService.checkAccountRepeat(account);
         Assertions.assertEquals(true, ret);
     }
+
+    /**
+     * @author PQ
+     * @Description 测试修改密码是否可用
+     * @Date 上午12:48 18/3/2020
+     * @version 3.3.1
+    **/
+    @Test
+    public void testChangePassword() {
+        String account = "test1";
+        String oldPassword = "test";
+        String newPassword = "test1";
+        boolean ret = userService.changePassword(account, oldPassword, newPassword);
+        Assertions.assertEquals(true, ret);
+    }
 }

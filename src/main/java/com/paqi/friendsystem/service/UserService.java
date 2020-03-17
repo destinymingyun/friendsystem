@@ -42,4 +42,17 @@ public interface UserService {
      * @version 2.1.1
     **/
     boolean checkAccountRepeat(String account);
+
+    /**
+     * 修改用户密码
+     * @author PQ
+     * @Description 改密码
+     * @param account：用户账户
+     * @param oldPassword：用户旧密码
+     * @param newPassword：用户新密码
+     * @return 返回是否修改成功
+     * @Date 上午12:47 18/3/2020
+     * @version 3.3.2
+    **/
+    boolean changePassword(String account, String oldPassword, String newPassword);
 }
