@@ -153,7 +153,10 @@
             </div>
             <hr>
             <div class="discuss-box">
-                <h2>评论区</h2>
+                <div class="discuss-box-title">
+                    <h2>评论区</h2>
+                    <a href="#">说说我自己的看法</a>
+                </div>
                 <div class="discusses">
                     <div class="discuss-title">
                         <h4>张三</h4>

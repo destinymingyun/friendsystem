@@ -38,7 +38,7 @@
             </label>
         </div>
         <div style="margin: 30px 0">
-            <button class="button-submit change-password-width">注册</button>
+            <button class="button-submit change-password-width">更改密码</button>
         </div>
     </div>
 </main>

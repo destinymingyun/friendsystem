@@ -8,6 +8,11 @@ html {
     background: #f4f4f4;
 }
 
+a {
+    color: #26c6da;
+    text-decoration: none;
+}
+
 .main-box {
     display: flex;
     margin-top: 20px;
@@ -33,6 +38,7 @@ h1 {
 
 .literature-box > .context {
     padding: 20px;
+    color: #333;
 }
 
 .author-box {
@@ -82,15 +88,28 @@ h1 {
     box-shadow: inset gray 2px 2px 5px;
 }
 
-.discuss-box > h2 {
+.discuss-box-title {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    margin-bottom: 5px;
+}
+
+.discuss-box-title > h2 {
     margin-top: 10px;
     margin-left: 20px;
     font-size: 20px;
     font-weight: bold;
 }
 
+.discuss-box-title > a {
+    padding-top: 10px;
+    margin-right: 15px;
+}
+
+
 .discuss-box > .discusses {
-    margin: 20px;
+    margin-bottom: 20px;
     border-top: 2px solid #707070;
     border-bottom: 2px solid #707070;
     padding: 15px;
@@ -108,11 +127,15 @@ h1 {
 
 .discuss-box > a{
     display: block;
-    text-decoration: none;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
     padding-bottom: 20px;
+    color: #707070;
+    transition: 1s;
+}
+
+.discuss-box > a:hover{
     color: #26c6da;
 }
 

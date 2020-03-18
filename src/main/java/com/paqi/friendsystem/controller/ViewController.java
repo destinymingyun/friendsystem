@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @Description
  * @Date 上午12:40 16/3/2020
  * @version 1.1.0
+ * @deprecated 3.4.4废弃，按访问级别拆分为不同的视图处理
 **/
 @Controller
 @RequestMapping("/view")
@@ -48,7 +49,7 @@ public class ViewController {
 
     /**
      * @author PQ
-     * @Description 登录页映射
+     * @Description userInfo信息页面
      * @Date 13:54 18/3/2020
      * @version 3.4.0
     **/
