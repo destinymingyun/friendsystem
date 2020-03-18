@@ -1,6 +1,7 @@
 package com.paqi.friendsystem.service;
 
 import com.paqi.friendsystem.entity.Fun;
+import com.paqi.friendsystem.entity.relation.FunMember;
 
 /**
  * @author PQ
@@ -32,4 +33,26 @@ public interface FunService {
      * @version 3.3.1
     **/
     boolean changeOwner(int newOwnerId, int oldOwner, int funId);
+
+    /**
+     * 加入一个兴趣部落
+     * @author PQ
+     * @Description 加入一个兴趣部落
+     * @param funMember：兴趣部落对应关系
+     * @return 若成功则返回该兴趣部落id
+     * @Date 10:34 18/3/2020
+     * @version 3.3.2
+    **/
+    int joinFun(FunMember funMember);
+
+    /**
+     * 退出某个兴趣部落
+     * @author PQ
+     * @Description 退出兴趣部落
+     * @param funMember：原有一条映射关系
+     * @return 返回是否退出成功，成功为true，失败为false
+     * @Date 10:30 18/3/2020
+     * @version 3.3.2
+    **/
+    boolean exitFun(FunMember funMember);
 }

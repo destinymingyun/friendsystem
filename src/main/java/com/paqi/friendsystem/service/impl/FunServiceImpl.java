@@ -7,7 +7,6 @@ import com.paqi.friendsystem.mapper.FunMemberMapper;
 import com.paqi.friendsystem.service.FunService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author PQ
@@ -31,9 +30,9 @@ public class FunServiceImpl implements FunService {
     public int createFun(Fun fun) {
         funMapper.postFun(fun);
         FunMember funMember = new FunMember();
-        funMember.setMemberId(fun.getBuilderId());
         funMember.setFunId(fun.getFunId());
-        funMemberMapper.postFunMember(funMember);
+        funMember.setMemberId(fun.getBuilderId());
+        this.joinFun(funMember);
         return fun.getFunId();
     }
 
@@ -46,6 +45,36 @@ public class FunServiceImpl implements FunService {
     @Override
     public boolean changeOwner(int newOwnerId, int oldOwner, int funId) {
         int ret = funMapper.putOwnerIdByOldOwnerIdAndFunId(oldOwner, newOwnerId, funId);
+        if (ret == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * @author PQ
+     * @Description 加入一个兴趣部落
+     * @Date 10:35 18/3/2020
+     * @version 3.3.2
+    **/
+    @Override
+    public int joinFun(FunMember funMember) {
+        funMember.setMemberId(funMember.getMemberId());
+        funMember.setFunId(funMember.getFunId());
+        funMemberMapper.postFunMember(funMember);
+        return funMember.getFunId();
+    }
+
+    /**
+     * @author PQ
+     * @Description 退出一个兴趣部落
+     * @Date 10:38 18/3/2020
+     * @version 3.3.2
+    **/
+    @Override
+    public boolean exitFun(FunMember funMember) {
+        int ret = funMemberMapper.deleteFunMember(funMember);
         if (ret == 1) {
             return true;
         } else {

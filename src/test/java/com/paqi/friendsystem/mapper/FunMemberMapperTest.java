@@ -30,4 +30,19 @@ public class FunMemberMapperTest {
         int ret = funMemberMapper.postFunMember(funMember);
         Assertions.assertNotEquals(0, ret);
     }
+
+    /**
+     * @author PQ
+     * @Description 删除一条对应关系测试
+     * @Date 10:28 18/3/2020
+     * @version 3.3.2
+    **/
+    @Test
+    public void testDeleteFunMember() {
+        FunMember funMember = new FunMember();
+        funMember.setFunId(2);
+        funMember.setMemberId(5);
+        int ret = funMemberMapper.deleteFunMember(funMember);
+        Assertions.assertEquals(1, ret);
+    }
 }
