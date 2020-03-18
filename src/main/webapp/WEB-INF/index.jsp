@@ -20,19 +20,7 @@
     <link rel="stylesheet" href="/static/css/index-main.css" type="text/css"/>
 </head>
 <body>
-<nav class="nav">
-    <div class="nav-box normal-width">
-        <div class="logo"><img src="/static/img/logo.png"></div>
-        <div class="nav-item">
-            <ul>
-                <li><a class="active" href="#">当前活动</a></li>
-                <li><a href="#">兴趣部落</a></li>
-                <li><a href="#">创建话题</a></li>
-                <li><a href="#">登录</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<%@include file="/WEB-INF/public/nav.jsp" %>
 <!--头部分-->
 <header class="banner">
     <img id="banner" src="/static/img/banner1.jpg">
@@ -111,12 +99,7 @@
         </div>
     </section>
 </main>
-<footer class="footer">
-    <div class="footer-items normal-width">
-        <div>版权所有©2016.作者<a href="#">唐帕绮</a>保留所有权利</div>
-        <div>作者邮箱:<a href="#">1261805554@qq.com</a></div>
-    </div>
-</footer>
+<%@include file="/WEB-INF/public/footer.jsp" %>
 <script src="/static/js/index-banner.js" type="text/javascript"></script>
 <script>
     window.onload = indexBanner();

@@ -45,4 +45,15 @@ public class ViewController {
     public String register() {
         return "./register";
     }
+
+    /**
+     * @author PQ
+     * @Description
+     * @Date 13:54 18/3/2020
+     * @version 3.4.0
+    **/
+    @GetMapping("/user-info")
+    public String userInfo() {
+        return "./user-info";
+    }
 }
