@@ -1,0 +1,39 @@
+/**
+ * @author PQ
+ * @Description 错误页面
+ * @Date 00:47 19/3/2020
+ * @version 3.4.7
+**/
+
+html {
+    height: 100%;
+    background-image: url("/static/img/404-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+main {
+    margin-top: 250px;
+}
+
+main > .error-title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.error-title {
+    color: #26c6da;
+    font-weight: bold;
+}
+
+.error-title > h1 {
+    margin-right: 50px;
+    font-size: 200px;
+    text-shadow: 2px 2px 1px #000, -2px -2px 1px #fff;
+
+}
+
+.error-title > h3 {
+    font-size: 100px;
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #fff;
+}
