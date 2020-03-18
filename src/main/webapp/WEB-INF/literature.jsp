@@ -23,7 +23,7 @@
 <mian>
     <section class="normal-width main-box">
         <div class="literature-box">
-            <h1>这是一个标题</h1>
+            <h1>三国</h1>
             <hr>
             <div class="context">
                 <p>
@@ -161,7 +161,7 @@
                     <hr>
                     <div>这篇文章真的很不错</div>
                 </div>
-                <div>点击显示更多</div>
+                <a href="#">点击显示更多</a>
             </div>
         </div>
         <div class="other">

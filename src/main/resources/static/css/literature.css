@@ -75,9 +75,11 @@ h1 {
 
 
 .discuss-box {
-    border: 2px solid #707070;
+    border: 2px solid black;
     width: 800px;
-    margin: 30px auto 30px 30px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: inset gray 2px 2px 5px;
 }
 
 .discuss-box > h2 {
@@ -89,12 +91,13 @@ h1 {
 
 .discuss-box > .discusses {
     margin: 20px;
-    border: 1px solid #707070;
+    border-top: 2px solid #707070;
+    border-bottom: 2px solid #707070;
     padding: 15px;
 }
 
 .discuss-box > .discusses > .discuss-title {
-    padding: 10px;
+    padding: 2px;
     display: flex;
     justify-content: space-between;
 }
@@ -103,10 +106,14 @@ h1 {
     font-weight: bold;
 }
 
-.discuss-box > div:last-child {
+.discuss-box > a{
+    display: block;
+    text-decoration: none;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+    padding-bottom: 20px;
+    color: #26c6da;
 }
 
 .discusses div:last-child {
