@@ -13,7 +13,22 @@
         <div class="sub-nav">
             <li>账号管理</li>
             <a href="">
+                <li>查询用户信息</li>
+            </a>
+            <a href="">
                 <li>修改用户信息</li>
+            </a>
+        </div>
+        <div class="sub-nav">
+            <li>文章管理</li>
+            <a href="">
+                <li>待审核文章</li>
+            </a>
+            <a href="">
+                <li>修改文章状态</li>
+            </a>
+            <a href="">
+                <li>删除指定评论</li>
             </a>
         </div>
     </ul>
