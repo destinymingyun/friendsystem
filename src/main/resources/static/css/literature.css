@@ -1,0 +1,114 @@
+/**
+ * @author PQ
+ * @Description 文章页
+ * @Date 15:07 18/3/2020
+ * @version 3.4.1
+**/
+html {
+    background: #f4f4f4;
+}
+
+.main-box {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.literature-box {
+    width: 900px;
+    background: white;
+    box-shadow: #707070 5px 5px 5px;
+    border: #26c6da 2px solid;
+    border-radius: 25px;
+}
+
+.literature-box > .context {
+    padding: 20px;
+}
+
+.author-box {
+    background: white;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #19abbd;
+    border-radius: 15px;
+    box-shadow: #707070 5px 5px 5px;
+}
+
+.author-box > h2 {
+    border-radius: 15px 15px 0 0;
+    padding: 10px 0;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background: #19abbd;
+}
+
+.author-box > h3 {
+    border-bottom: #19abbd 2px solid;
+    padding: 10px 10px 10px 30px;
+    text-align: start;
+}
+
+.author-box > h3:last-child {
+    border-bottom: none;
+    border-radius: 0 0 15px 15px;
+}
+
+.author-box > h3:hover {
+    color: white;
+    background: #26c6da;
+    text-shadow: #707070 1px 1px 3px;
+}
+
+
+
+.discuss-box {
+    border: 2px solid #707070;
+    width: 800px;
+    margin: 30px auto 30px 30px;
+}
+
+.discuss-box > h2 {
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.discuss-box > .discusses {
+    margin: 20px;
+    border: 1px solid #707070;
+    padding: 15px;
+}
+
+.discuss-box > .discusses > .discuss-title {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.discusses > .discuss-title > h4 {
+    font-weight: bold;
+}
+
+.discuss-box > div:last-child {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.discusses div:last-child {
+    margin-left: 20px;
+}

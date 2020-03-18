@@ -37,7 +37,7 @@ public class ViewController {
 
     /**
      * @author PQ
-     * @Description
+     * @Description 注册映射
      * @Date 下午4:43 16/3/2020
      * @version 2.2.0
     **/
@@ -48,12 +48,23 @@ public class ViewController {
 
     /**
      * @author PQ
-     * @Description
+     * @Description 登录页映射
      * @Date 13:54 18/3/2020
      * @version 3.4.0
     **/
     @GetMapping("/user-info")
     public String userInfo() {
         return "./user-info";
+    }
+    
+    /**
+     * @author PQ
+     * @Description 文章页映射
+     * @Date 14:27 18/3/2020
+     * @version 3.4.1
+    **/
+    @GetMapping("/literature")
+    public String literature() {
+        return "./literature";
     }
 }

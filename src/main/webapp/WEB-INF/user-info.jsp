@@ -15,6 +15,7 @@
 </head>
 <body>
 <%@include file="/WEB-INF/public/nav.jsp" %>
+
 <%@include file="/WEB-INF/public/footer.jsp" %>
 </body>
 </html>

@@ -1,7 +1,7 @@
 #服务器设定
 server:
   # 端口设定
-  port: 8888
+  port: 8080
   #配置JSP热部署
   servlet:
     jsp:
