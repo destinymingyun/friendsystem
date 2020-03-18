@@ -5,7 +5,7 @@
  * @version 3.4.1
 **/
 html {
-    background: #f4f4f4;
+    background: #edf1f2;
 }
 
 a {
@@ -30,8 +30,8 @@ h1 {
 
 .literature-box {
     width: 900px;
-    background: white;
-    box-shadow: #707070 5px 5px 5px;
+    background: #f4f4f4;
+    box-shadow: #707070 5px 5px 5px, white -2px -2px 1px;
     border: #26c6da 2px solid;
     border-radius: 25px;
 }
@@ -85,7 +85,7 @@ h1 {
     width: 800px;
     margin: 30px auto;
     border-radius: 10px;
-    box-shadow: inset gray 2px 2px 5px;
+    box-shadow: -2px -2px 1px #000, 2px 2px 1px #fff;
 }
 
 .discuss-box-title {

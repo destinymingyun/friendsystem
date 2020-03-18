@@ -37,7 +37,7 @@ public class PublicViewController {
 
     /**
      * @author PQ
-     * @Description 登录页面
+     * @Description 登录页面映射
      * @Date 21:44 18/3/2020
      * @version 3.4.4
     **/
@@ -48,12 +48,23 @@ public class PublicViewController {
 
     /**
      * @author PQ
-     * @Description 注册页面
+     * @Description 注册页面映射
      * @Date 21:47 18/3/2020
      * @version 3.4.4
     **/
     @GetMapping("/register")
     public String register() {
         return "./register";
+    }
+
+    /**
+     * @author PQ
+     * @Description 文章列表页面映射
+     * @Date 02:06 19/3/2020
+     * @version 3.4.8
+    **/
+    @GetMapping("/literature-list")
+    public String literatureList() {
+        return "/literature-list";
     }
 }
