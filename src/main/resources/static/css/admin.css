@@ -1,0 +1,54 @@
+/**
+ * @author PQ
+ * @Description 管理员主页样式
+ * @Date 22:01 18/3/2020
+ * @version 3.4.5
+**/
+
+.panel {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+main {
+    flex-grow: 1;
+    background: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main > header {
+    background: white;
+    height: 50px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+main > header > div {
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    right: 50px;
+    top: 15px;
+}
+
+
+main > .main-panel {
+    background: #edf1f2;
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+.admin-banner {
+    opacity: 0.5;
+}
+
+.admin-banner > img{
+    width: 100%;
+    height: 150px;
+}

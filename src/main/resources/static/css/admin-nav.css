@@ -1,0 +1,49 @@
+/**
+ * @author PQ
+ * @Description admin导航栏
+ * @Date 23:22 18/3/2020
+ * @version 3.4.5
+**/
+
+.main-nav {
+    width: 250px;
+    height: 100%;
+    background: #2e3344;
+}
+
+.main-nav > ul li {
+    height: 40px;
+    line-height: 40px;
+    color: #b4b6bd;
+    padding-left: 20px;
+}
+
+.sub-nav > li{
+    font-weight: bold;
+}
+
+.sub-nav > a > li{
+    padding-left: 50px;
+    transition: 0.5s;
+}
+
+.sub-nav > a >li:hover {
+    color: white;
+    text-shadow: #19abbd 1px 1px 3px;
+    background: #26c6da;
+}
+
+.main-nav > ul > li:first-child {
+    height: 50px;
+    line-height: 50px;
+    font-size: 28px;
+    display: flex;
+    justify-items: center;
+}
+
+.main-nav > ul > li:first-child > img {
+    margin-top: 10px;
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+}
