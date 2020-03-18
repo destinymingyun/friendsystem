@@ -67,4 +67,15 @@ public class ViewController {
     public String literature() {
         return "./literature";
     }
+
+    /**
+     * @author PQ
+     * @Description 修改密码页面
+     * @Date 19:47 18/3/2020
+     * @version 3.4.3
+    **/
+    @GetMapping("/change-password")
+    public String changePassword() {
+        return "./change-password";
+    }
 }

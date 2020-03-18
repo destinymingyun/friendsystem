@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <title>文章</title>
     <link rel="shortcut icon" type="image/x-icon" href="/static/img/logo.png"/>
     <link rel="stylesheet" href="/static/css/reset.css" type="text/css"/>
     <link rel="stylesheet" href="/static/css/nav.css" type="text/css"/>
@@ -164,7 +165,7 @@
                 <a href="#">点击显示更多</a>
             </div>
         </div>
-        <div class="other">
+        <div>
             <div class="author-box">
                 <h2>作者信息</h2>
                 <h3>
