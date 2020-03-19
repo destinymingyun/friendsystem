@@ -1,0 +1,50 @@
+/**
+ * @author PQ
+ * @Description 表格基本样式
+ * @Date 10:02 19/3/2020
+ * @version 3.4.9
+**/
+
+.table {
+    margin: 50px auto;
+}
+
+.table > thead {
+    border: 1px solid gray;
+}
+
+.table > thead > tr > th {
+    font-size: 20px;
+    padding: 10px 80px;
+    font-weight: bold;
+    background: #26c6da;
+}
+
+.table > tbody > tr {
+    border: gray solid 1px;
+}
+
+.table > tbody > tr > td {
+    padding: 10px;
+    text-align: center;
+}
+
+.table > tbody > tr:nth-child(2n) {
+    background-color: #26c6da;
+}
+
+.table > tbody > tr:hover {
+    box-shadow: gray 2px 2px 2px inset;
+}
+
+.table > tbody > tr:nth-child(2n):hover {
+    background: #19abbd;
+}
+
+.table > tbody > tr:nth-child(2n-1) {
+    background-color: white;
+}
+
+.table > tbody > tr:nth-child(2n-1):hover {
+    background-color: #edf1f2;
+}

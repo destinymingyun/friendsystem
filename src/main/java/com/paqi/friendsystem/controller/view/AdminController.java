@@ -23,4 +23,15 @@ public class AdminController {
     public String adminIndex() {
         return "/admin-index";
     }
+
+    /**
+     * @author PQ
+     * @Description 用户表页面映射
+     * @Date 14:10 19/3/2020
+     * @version 3.4.9
+    **/
+    @GetMapping("/user")
+    public String adminUser() {
+        return "/admin-user";
+    }
 }
