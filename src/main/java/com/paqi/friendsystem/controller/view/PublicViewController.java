@@ -67,4 +67,15 @@ public class PublicViewController {
     public String literatureList() {
         return "/literature-list";
     }
+
+    /**
+     * @author PQ
+     * @Description 找回密码
+     * @Date 15:40 19/3/2020
+     * @version 3.4.10
+    **/
+    @GetMapping("/find-password")
+    public String findPassword() {
+        return "/find-password";
+    }
 }
