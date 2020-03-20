@@ -20,7 +20,30 @@
 <main>
     <%@include file="/WEB-INF/public/nav.jsp" %>
     <section class="write-box normal-width">
-
+        <div class="container">
+            <div class="container-header">
+                <label class="write-index-title-input">
+                    <textarea class="input1" placeholder="请输入标题（最多30字）"></textarea>
+                </label>
+            </div>
+            <div class="editable-toolbar-controls">
+                <hr color="grey">
+                <span>写文章</span>
+                <div class="button"><button class="button-editable"><img class="button-img" src="/static/icon/baocun.png"></button></div>
+                <div class="button"><button class="button-editable"><img class="button-img" src="/static/icon/bold.png"></button></div>
+                <div class="button"><button class="button-editable"><img class="button-img" src="/static/icon/shanchu.png"></button></div>
+                <div class="button"><button class="button-editable"><img class="button-img" src="/static/icon/tupian.png"></button></div>
+                <div class="button"><button class="button-editable"><img class="button-img" src="/static/icon/zitidaima.png"></button></div>
+                <hr color="grey">
+            </div>
+            <div class="editable-content">
+                <div class="essay-content">
+                    <label class="essay-content-input">
+                        <textarea class="input2" placeholder="请输入正文"></textarea>
+                    </label>
+                </div>
+            </div>
+        </div>
     </section>
     <%@include file="/WEB-INF/public/footer.jsp" %>
 </main>
