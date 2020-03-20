@@ -17,4 +17,5 @@ public class Literature {
     private String title;
     private String context;
     private Date createTime;
+    private int status;
 }

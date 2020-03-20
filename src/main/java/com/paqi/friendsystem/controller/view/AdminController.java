@@ -34,4 +34,15 @@ public class AdminController {
     public String adminUser() {
         return "/admin-user";
     }
+
+    /**
+     * @author PQ
+     * @Description 文章管理页面
+     * @Date 23:08 20/3/2020
+     * @version 3.4.18
+    **/
+    @GetMapping("/literature")
+    public String adminListerature() {
+        return "/admin-literature";
+    }
 }

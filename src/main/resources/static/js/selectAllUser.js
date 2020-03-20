@@ -25,6 +25,11 @@ function selectAllUser(list) {
  * @version 3.4.15
 **/
 function change(userId, status) {
+    if (status == 0) {
+        status = 1;
+    } else {
+        status = 0;
+    }
     var data = {
         "userId": userId,
         "status": status

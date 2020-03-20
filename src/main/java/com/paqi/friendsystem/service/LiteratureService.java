@@ -43,4 +43,25 @@ public interface LiteratureService {
      * @version 3.4.13
     **/
     ArrayList<Literature> getAllLiteratureInFun(int funId);
+
+    /**
+     * 根据文章状态返回文章列表
+     * @author PQ
+     * @Description 文章内容状态
+     * @return 文章列列表
+     * @Date 23:39 20/3/2020
+     * @version 3.4.19
+    **/
+    ArrayList<Literature> getLiteratureByStatus(int status);
+
+    /**
+     * @author PQ
+     * @Description 3.4.19
+     * @param literatureId:文章id
+     * @param status: 文章状态
+     * @return 更改成功返回true，否则返回false
+     * @Date 00:48 21/3/2020
+     * @version 3.4.19
+    **/
+    boolean updateLiterature(int literatureId, int status);
 }

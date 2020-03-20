@@ -15,17 +15,17 @@
             <a href="">
                 <li>查询用户信息</li>
             </a>
-            <a href="">
+            <a href="/admin/user">
                 <li>修改用户信息</li>
             </a>
         </div>
         <div class="sub-nav">
-            <li>文章管理</li>
-            <a href="">
-                <li>待审核文章</li>
+            <li>话题管理</li>
+            <a href="/admin/literature">
+                <li>待审核话题</li>
             </a>
             <a href="">
-                <li>修改文章状态</li>
+                <li>修改话题状态</li>
             </a>
             <a href="">
                 <li>删除指定评论</li>

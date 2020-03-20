@@ -4,10 +4,8 @@ import com.paqi.friendsystem.entity.Literature;
 import com.paqi.friendsystem.entity.user.Account;
 import com.paqi.friendsystem.service.LiteratureService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.Date;
@@ -48,5 +46,27 @@ public class LiteratureController {
     @GetMapping("/literature-list")
     public ArrayList<Literature> getAllLiteratureByFunId(int funId) {
         return literatureService.getAllLiteratureInFun(funId);
+    }
+
+    /**
+     * @author PQ
+     * @Description 根据文章状态返回文章
+     * @Date 23:55 20/3/2020
+     * @version 3.4.19
+    **/
+    @GetMapping("/literature-status-list")
+    public ArrayList<Literature> getAllLiteratureByStatus(int status) {
+        return literatureService.getLiteratureByStatus(status);
+    }
+
+    /**
+     * @author PQ
+     * @Description 更新文章状态
+     * @Date 00:40 21/3/2020
+     * @version 3.4.19
+    **/
+    @PutMapping("/update-status")
+    public boolean changeLiteratureStatus(int literatureId, int status) {
+        return literatureService.updateLiterature(literatureId, status);
     }
 }
