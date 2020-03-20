@@ -6,10 +6,6 @@
 **/
 function selectAllUser(list) {
     for(var i=0;i<list.length;i++){
-        var data = {
-            "userId": list[i].userId,
-            "status": list[i].status
-        };
         var info = `
                 <tr>
                     <td>${list[i].userId}</td>
