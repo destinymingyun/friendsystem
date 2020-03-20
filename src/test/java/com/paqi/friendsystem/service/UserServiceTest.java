@@ -52,7 +52,7 @@ public class UserServiceTest {
         userInfo.setIntroduction("一个漂亮的小姑凉");
         userInfo.setJob("学生");
         userInfo.setRealName("唐帕绮");
-        userInfo.setSex(true);
+        userInfo.setSex(1);
         int userId = userService.registerAccount(account,userInfo);
         Assertions.assertEquals(1, userId);
     }

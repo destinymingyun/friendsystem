@@ -47,7 +47,7 @@
                 </label>
             </div>
             <div style="margin-top: 20px">
-                <button class="button-submit find-password-box-width">下一步</button>
+                <button class="button-submit find-password-box-width" id="accountButton">下一步</button>
             </div>
         </div>
         <div class="find-password-card">
@@ -63,30 +63,24 @@
                     </label>
                 </div>
             </div>
-            <div style="margin-top: 20px">
-                <button class="button-submit find-password-box-width">下一步</button>
-            </div>
-        </div>
-        <div class="find-password-card">
-        <div class="input-box">
-            <label>
-                <input class="input" placeholder="请输入您的新密码">
-            </label>
         </div>
         <div class="find-password-card">
             <div class="input-box">
                 <label>
-                    <input class="input" placeholder="请确认您的新密码">
+                    <input class="input" placeholder="请输入您的新密码">
                 </label>
             </div>
+            <div class="find-password-card">
+                <div class="input-box">
+                    <label>
+                        <input class="input" placeholder="请确认您的新密码">
+                    </label>
+                </div>
+            </div>
         </div>
-        <div style="margin-top: 20px">
-            <button class="button-submit find-password-box-width">下一步</button>
-        </div>
-    </div>
         <div class="find-password-card">
             <div style="margin-top: 20px">
-                <button class="button-submit find-password-box-width">下一步</button>
+                <button class="button-submit find-password-box-width" id="find-password-button" onclick="buttonClick()">下一步</button>
             </div>
         </div>
     </div>

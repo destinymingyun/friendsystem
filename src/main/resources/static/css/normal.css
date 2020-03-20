@@ -12,3 +12,10 @@ html {
     width: 1180px;
     margin: 0 auto;
 }
+
+.error {
+    color: #DC143C;
+    font-size: 17px;
+    display: none;
+    text-align: center;
+}

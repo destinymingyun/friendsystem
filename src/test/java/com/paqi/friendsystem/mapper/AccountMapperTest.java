@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.ArrayList;
+
 /**
  * @author PQ
  * @Description 账号测试类
@@ -77,5 +79,15 @@ public class AccountMapperTest {
         String newPassword = "test1";
         int ret = accountMapper.putPasswordByAccountAndOldPassword(account, oldPassword, newPassword);
         Assertions.assertEquals(1, ret);
+    }
+
+    @Test
+    public void testLogin() {
+        Account account = new Account();
+        account.setAccount("test1");
+        account.setPassword("test");
+        Account dbAccount = accountMapper
+                .getAccountEntityByAccountAndPassword(account.getAccount(), account.getPassword());
+        System.out.println("dbAccount = " + dbAccount);
     }
 }

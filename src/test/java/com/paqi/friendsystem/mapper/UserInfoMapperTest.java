@@ -33,7 +33,7 @@ public class UserInfoMapperTest {
         userInfo.setIntroduction("一个漂亮的小姑凉");
         userInfo.setJob("学生");
         userInfo.setRealName("唐帕绮");
-        userInfo.setSex(true);
+        userInfo.setSex(1);
 
         int ret = userInfoMapper.postUserInfo(userInfo);
         Assertions.assertEquals(ret, 1);

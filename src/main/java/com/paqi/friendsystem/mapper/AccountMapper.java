@@ -20,12 +20,13 @@ public interface AccountMapper {
      * @Date 上午2:22 16/3/2020
      * @version 2.0
     **/
-    @Insert("INSERT INTO `account`(`account`, `password`, `user_type`) VALUES(#{account}, #{password}, #{userType})")
+    @Insert("INSERT INTO `account`(`account`, `password`, `status`, `user_type`) VALUES(#{account}, #{password}, #{status}, #{userType})")
     @Options(useGeneratedKeys = true, keyProperty = "userId", keyColumn = "user_id")
     int postAccount(Account account);
 
     /**
      * 根据用户的账号和密码获取用户的userId，仅当两个条件同时满足才会返回userId
+     * @deprecated  3.4.11废弃,现在应该调用getAccountEntityByAccountAndPassword()来获得返回值满足需求
      * @author PQ
      * @Description 根据账户获取
      * @param account:保存的用户账户密码的实体类
@@ -34,7 +35,7 @@ public interface AccountMapper {
      * @version 2.0.1
     **/
     @Select("SELECT `user_id` FROM `account` WHERE `account` = #{account} AND `password` = #{password}")
-    int getUserIdByAccountAndPassword(Account account);
+    Integer getUserIdByAccountAndPassword(Account account);
 
     /**
      * 根据用户账户返回用户id
@@ -46,7 +47,7 @@ public interface AccountMapper {
      * @version 2.1.2
     **/
     @Select("SELECT `user_id` FROM `account` WHERE `account` = #{account}")
-    int getUserIdByAccount(String account);
+    Integer getUserIdByAccount(String account);
 
     /**
      * 根据账户和旧密码更新密码
@@ -63,4 +64,24 @@ public interface AccountMapper {
             "WHERE `account` = #{account} AND `password` = #{oldPassword}")
     int putPasswordByAccountAndOldPassword(@Param("account") String account, @Param("oldPassword") String oldPassword,
                                            @Param("newPassword")String newPassword);
+
+    /**
+     * 根据账户和密码返回整个类
+     * @author PQ
+     * @Description 登录
+     * @param account:账户
+     * @param password:密码
+     * @return 返回用户账户类
+     * @Date 21:26 19/3/2020
+     * @version 3.4.11
+    **/
+    @Select("SELECT * FROM `account` " +
+            "WHERE `account` = #{account} AND `password` = #{password}")
+    @Results(value={
+            @Result(column="user_id", property="userId", id=true),
+            @Result(column="account", property="account"),
+            @Result(column="password ", property="password"),
+            @Result(column="user_type", property="userType")
+    })
+    Account getAccountEntityByAccountAndPassword(@Param("account") String account, @Param("password") String password);
 }

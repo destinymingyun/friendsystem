@@ -31,6 +31,15 @@
                 <li>删除指定评论</li>
             </a>
         </div>
+        <div class="sub-nav">
+            <li>活动管理</li>
+            <a href="">
+                <li>正在进行活动</li>
+            </a>
+            <a href="">
+                <li>活动管理</li>
+            </a>
+        </div>
     </ul>
 </nav>
 </html>

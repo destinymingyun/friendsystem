@@ -14,4 +14,16 @@
 $(document).ready(function () {
     var cards = $(".find-password-card");
     cards.css("display", "none");
+    $(cards[0]).css("display", "block");
 })
+
+var index = 0;
+function buttonClick() {
+    var cards = $(".find-password-card");
+    console.log("aaa"+index);
+    if (index != 3) {
+        $(cards[index]).css("display", "none");
+        $(cards[index+1]).css("display", "block");
+    }
+    index++;
+}

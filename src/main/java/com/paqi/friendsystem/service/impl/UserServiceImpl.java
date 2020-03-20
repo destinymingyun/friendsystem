@@ -22,6 +22,7 @@ public class UserServiceImpl implements UserService {
     private UserInfoMapper userInfoMapper;
 
     /**
+     * @deprecated 3.4.11废弃
      * @author PQ
      * @Description 登录服务
      * @Date 下午3:39 16/3/2020
@@ -29,7 +30,12 @@ public class UserServiceImpl implements UserService {
     **/
     @Override
     public int login(Account account) {
-        return accountMapper.getUserIdByAccountAndPassword(account);
+        Integer userId = accountMapper.getUserIdByAccountAndPassword(account);
+        if (userId == null) {
+            return 0;
+        } else {
+            return userId;
+        }
     }
 
     /**
@@ -54,8 +60,8 @@ public class UserServiceImpl implements UserService {
     **/
     @Override
     public boolean checkAccountRepeat(String account) {
-        int userId = accountMapper.getUserIdByAccount(account);
-        if (userId == 0) {
+        Integer userId = accountMapper.getUserIdByAccount(account);
+        if (userId == null) {
             return false;
         } else {
             return true;
@@ -77,4 +83,18 @@ public class UserServiceImpl implements UserService {
             return false;
         }
     }
+
+    /**
+     * @author PQ
+     * @Description 账户登录类
+     * @Date 21:41 19/3/2020
+     * @version 3.4.11
+    **/
+    @Override
+    public Account loginAccount(Account account) {
+        Account dbAccount =  accountMapper.getAccountEntityByAccountAndPassword(account.getAccount(), account.getPassword());
+        return dbAccount;
+    }
+
+
 }

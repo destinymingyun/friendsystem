@@ -11,6 +11,7 @@ import com.paqi.friendsystem.entity.user.UserInfo;
 **/
 public interface UserService {
     /**
+     * @deprecated 3.4.11废弃
      * @author PQ
      * @Description
      * @param account：用户账户
@@ -55,4 +56,14 @@ public interface UserService {
      * @version 3.3.2
     **/
     boolean changePassword(String account, String oldPassword, String newPassword);
+
+    /**
+     * @author PQ
+     * @Description 登录
+     * @param account:登录
+     * @version 返回用户账户类
+     * @Date 21:39 19/3/2020
+     * @version 3.4.11
+    **/
+    Account loginAccount(Account account);
 }

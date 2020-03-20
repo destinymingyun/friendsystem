@@ -82,11 +82,17 @@
             <version>2.2.5.RELEASE</version>
             <optional>true</optional>
         </dependency>
-<!--*****  V2.3.1  热部署开发****************************************************************************-->
+<!--*****  V2.3.1  jquery****************************************************************************-->
         <dependency>
             <groupId>org.webjars.bower</groupId>
             <artifactId>jquery</artifactId>
             <version>3.4.1</version>
+        </dependency>
+<!--*****  V3.4.11  前后端交互fast-json****************************************************************************-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.66</version>
         </dependency>
     </dependencies>
 

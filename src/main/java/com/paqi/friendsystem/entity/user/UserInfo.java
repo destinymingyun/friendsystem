@@ -17,5 +17,5 @@ public class UserInfo {
     private String introduction;
     private String hobby;
     private int age;
-    private boolean sex;
+    private int sex;
 }

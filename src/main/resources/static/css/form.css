@@ -5,7 +5,7 @@
  * @version 2.3.0
 **/
 
-input,button {
+input, button {
     outline: none;
 }
 
@@ -15,11 +15,11 @@ input,button {
 }
 
 .input-box img {
-     position: absolute;
-     width: 30px;
-     height: 30px;
-     left: 0;
- }
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 0;
+}
 
 .input {
     width: 100%;
@@ -63,6 +63,19 @@ input,button {
     height: 30px;
 }
 
-.button-success {
+.check-button {
+    position: absolute;
+    right: 20px;
+    bottom: 3px;
+    background: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+}
 
+.check-button:active {
+    background: darkgreen;
 }

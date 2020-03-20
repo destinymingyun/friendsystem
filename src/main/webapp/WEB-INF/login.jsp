@@ -25,26 +25,40 @@
             <div class="input-box">
                 <label>
                     <img src="/static/img/user-icon.png">
-                    <input class="input" placeholder="请输入账户">
+                    <input class="input" placeholder="请输入账户" id="account">
                 </label>
             </div>
             <div class="input-box">
                 <label>
                     <img src="/static/img/password-icon.png">
-                    <input class="input" type="password" placeholder="请输入密码">
+                    <input class="input" type="password" placeholder="请输入密码" id="password">
                 </label>
             </div>
         </div>
-        <div style="margin-top: 50px">
-            <button class="button-submit login-width">登录</button>
+        <div class="error">
+            <h3>账户或密码错误</h3>
+        </div>
+        <div style="margin-top: 20px">
+            <button class="button-submit login-width id" id="loginButton">登录</button>
         </div>
         <br>
         <div class="other">
-            <a href="/view/register">没有账户？注册</a>
-            <a href="/view/">忘记密码？找回</a>
+            <a href="/public/register">没有账户？注册</a>
+            <a href="/public/find-password">忘记密码？找回</a>
         </div>
     </div>
 </main>
 <script type="text/javascript" src="/webjars/jquery/3.4.1/dist/jquery.js"></script>
+<script type="text/javascript" src="/static/js/service/accountService.js"></script>
+<script>
+    $("#loginButton").click(function () {
+        var account = {
+            "account": $("#account").val(),
+            "password": $("#password").val(),
+        };
+        console.log(account);
+        login(JSON.stringify(account));
+    })
+</script>
 </body>
 </html>
