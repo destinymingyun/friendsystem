@@ -3,6 +3,8 @@ package com.paqi.friendsystem.service;
 import com.paqi.friendsystem.entity.Fun;
 import com.paqi.friendsystem.entity.relation.FunMember;
 
+import java.util.ArrayList;
+
 /**
  * @author PQ
  * @Description 兴趣部落接口
@@ -55,4 +57,12 @@ public interface FunService {
      * @version 3.3.2
     **/
     boolean exitFun(FunMember funMember);
+
+    /**
+     * @author PQ
+     * @Description 获取全部兴趣
+     * @Date 17:35 20/3/2020
+     * @version 3.4.14
+    **/
+    ArrayList<Fun> getAllFun();
 }

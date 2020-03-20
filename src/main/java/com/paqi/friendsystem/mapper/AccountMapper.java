@@ -98,12 +98,6 @@ public interface AccountMapper {
     **/
     @Select("SELECT * FROM `account` " +
             "WHERE `user_type` = #{userType}")
-    @Results(value={
-            @Result(column="user_id", property="userId", id=true),
-            @Result(column="account", property="account"),
-            @Result(column="password ", property="password"),
-            @Result(column="user_type", property="userType")
-    })
     ArrayList<Account> getAllUser(int userType);
 
     /**

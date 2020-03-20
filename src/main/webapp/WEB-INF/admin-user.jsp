@@ -37,22 +37,36 @@
                     <th>操作</th>
                 </tr>
                 </thead>
-                <tbody id="tbody">
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>test1</td>
+                    <td>可用</td>
+                    <td>停用</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>test2</td>
+                    <td>可用</td>
+                    <td>停用</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>test3</td>
+                    <td>可用</td>
+                    <td>停用</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>test4</td>
+                    <td>可用</td>
+                    <td>停用</td>
+                </tr>
                 </tbody>
             </table>
         </section>
         <%@include file="/WEB-INF/public/footer.jsp" %>
     </main>
 </div>
-<script type="text/javascript" src="/webjars/jquery/3.4.1/dist/jquery.js"></script>
-<script type="text/javascript" language="JavaScript" src="/static/js/service/adminService.js"></script>
-<script type="text/javascript" language="JavaScript" src="/static/js/selectAllUser.js"></script>
-<script type="text/javascript">
-    window.onload = function () {
-        getUsers(function (list) {
-            selectAllUser(list)
-        });
-    }
-</script>
 </body>
 </html>

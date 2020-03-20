@@ -7,7 +7,7 @@
 
 /**
  * @author PQ
- * @Description 基础请求
+ * @Description 登录请求
  * @Date 20:44 19/3/2020
  * @version 3.4.11
 **/
