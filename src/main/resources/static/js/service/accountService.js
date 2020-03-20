@@ -57,7 +57,7 @@ function repeatAccount(data) {
                 $("#account").css("border-color", "#DC143C");
                 $(".error").css("display", "block");
             } else {
-                $("#account").css("border-color", "black");
+                $("#account").css("border-color", "green");
                 $(".error").css("display", "none");
             }
         },

@@ -16,6 +16,7 @@ main {
     flex-grow: 1;
     background: #f4f4f4;
     padding-top: 20px;
+    min-height: 800px;
 }
 
 .literature-list-box > header {

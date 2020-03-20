@@ -7,7 +7,9 @@
 
 function funForeach(list) {
     for (var i = 0; i < list.length; i++) {
-        var str = `<li><a onclick="getFunInfo(${list[i].funId})">${list[i].funName}</a></li>
+        var str = `<li><a onclick="getFunInfo(${list[i].funId}, ${list[i].memberNum},'${list[i].funName}')">
+                    ${list[i].funName}
+                    </a></li>
                     <li>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;</li>`;
         $("#fun").append(str);
     }
@@ -19,7 +21,9 @@ function funForeach(list) {
  * @Date 21:06 20/3/2020
  * @version 3.4.17
 **/
-function getFunInfo(funId) {
+function getFunInfo(funId, num, name) {
+    $("#fun-name").html(name);
+    $("#people-num").html("有:"+num+"人关注本部落");
     var data = {
         "funId": funId
     }
