@@ -108,4 +108,20 @@ public class UserServiceImpl implements UserService {
     public ArrayList<Account> getUsers(int userType) {
         return accountMapper.getAllUser(userType);
     }
+
+    /**
+     * @author PQ
+     * @Description 修改用户状态
+     * @Date 16:13 20/3/2020
+     * @version 3.4.14
+    **/
+    @Override
+    public boolean setUserStatus(int userId, int status) {
+        Integer ret = accountMapper.putAccountStatus(userId, status);
+        if (ret == null) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }

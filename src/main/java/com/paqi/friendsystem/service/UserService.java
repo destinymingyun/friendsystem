@@ -79,4 +79,16 @@ public interface UserService {
      * @version 3.4.13
     **/
     ArrayList<Account> getUsers(int userType);
+
+    /**
+     * 修改用户状态
+     * @author PQ
+     * @Description 修改用户权限
+     * @param userId：用户id
+     * @param status：用户状态
+     * @return 若修改成功返回true，否则返回false；
+     * @Date 16:12 20/3/2020
+     * @version 3.4.13
+    **/
+    boolean setUserStatus(int userId, int status);
 }

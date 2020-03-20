@@ -105,4 +105,17 @@ public interface AccountMapper {
             @Result(column="user_type", property="userType")
     })
     ArrayList<Account> getAllUser(int userType);
+
+    /**
+     * 更改账户状态
+     * @author PQ
+     * @Description 设置用户账户状态
+     * @param userId：用户id
+     * @param status：用户状态 1可用，0禁用
+     * @return 返回受影响的行数
+     * @Date 15:59 20/3/2020
+     * @version 3.4.14
+    **/
+    @Update("UPDATE `account` SET `status` = #{status} WHERE `user_id` = #{userId} ")
+    Integer putAccountStatus(int userId, int status);
 }
