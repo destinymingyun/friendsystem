@@ -20,11 +20,11 @@ import java.util.Date;
  * @version 3.4.12
 **/
 @RestController
-@RequestMapping("/api/write")
+@RequestMapping("/api/literature")
 public class LiteratureController {
     @Autowired
     private LiteratureService literatureService;
-    
+
     /**
      * @author PQ
      * @Description 写文章
@@ -47,7 +47,7 @@ public class LiteratureController {
      * @version 3.4.13
     **/
     @GetMapping("/literature-list")
-    public ArrayList<Literature> getAllLiteratureByFunId() {
-        return null;
+    public ArrayList<Literature> getAllLiteratureByFunId(int funId) {
+        return literatureService.getAllLiteratureInFun(funId);
     }
 }

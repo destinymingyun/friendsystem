@@ -8,6 +8,8 @@ import com.paqi.friendsystem.service.FunService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+
 /**
  * @author PQ
  * @Description 兴趣部落服务接口实现类
@@ -80,5 +82,16 @@ public class FunServiceImpl implements FunService {
         } else {
             return false;
         }
+    }
+
+    /**
+     * @author PQ
+     * @Description 返回所有兴趣部落
+     * @Date 17:39 20/3/2020
+     * @version 3.4.14
+    **/
+    @Override
+    public ArrayList<Fun> getAllFun() {
+        return funMapper.getAll();
     }
 }

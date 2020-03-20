@@ -4,11 +4,13 @@ import com.paqi.friendsystem.entity.Fun;
 import com.paqi.friendsystem.entity.user.Account;
 import com.paqi.friendsystem.service.FunService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -36,5 +38,10 @@ public class FunController {
         fun.setBuilderId(userId);
         funService.createFun(fun);
         return false;
+    }
+
+    @GetMapping("/get-fun-list")
+    public ArrayList<Fun> getFun() {
+        return funService.getAllFun();
     }
 }

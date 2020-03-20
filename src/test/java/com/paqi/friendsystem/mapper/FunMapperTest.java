@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -50,5 +51,19 @@ public class FunMapperTest {
         int funId = 2;
         int ret = funMapper.putOwnerIdByOldOwnerIdAndFunId(oldUserId, newUserId, funId);
         Assertions.assertNotEquals(0, ret);
+    }
+
+    /**
+     * @author PQ
+     * @Description 获取全部兴趣部落
+     * @Date 17:55 20/3/2020
+     * @version 3.4.14
+    **/
+    @Test
+    public void testGetAll() {
+        ArrayList<Fun> funArrayList = funMapper.getAll();
+        for(Fun fun : funArrayList) {
+            System.out.println("fun = " + fun);
+        }
     }
 }

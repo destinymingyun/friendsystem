@@ -2,6 +2,9 @@ package com.paqi.friendsystem.mapper;
 
 import com.paqi.friendsystem.entity.Fun;
 import org.apache.ibatis.annotations.*;
+import org.apache.ibatis.type.JdbcType;
+
+import java.util.ArrayList;
 
 /**
  * @author PQ
@@ -40,4 +43,14 @@ public interface FunMapper {
             "WHERE `owner_id` = #{oldOwnerId} AND `fun_id` = #{funId}")
     int putOwnerIdByOldOwnerIdAndFunId(@Param("oldOwnerId")int oldOwnerId, @Param("newOwnerId")int newOwnerId,
                                        @Param("funId")int funId);
+
+    /**
+     * @author PQ
+     * @Description 获取全部fun
+     * @return 返回星期部落列表
+     * @Date 17:30 20/3/2020
+     * @version 3.4.14
+    **/
+    @Select("SELECT * FROM `fun`")
+    ArrayList<Fun> getAll();
 }

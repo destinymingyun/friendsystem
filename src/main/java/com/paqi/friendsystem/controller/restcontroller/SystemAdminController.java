@@ -31,10 +31,8 @@ public class SystemAdminController {
     @GetMapping("/users")
     public ArrayList<Account> getUsers() {
         ArrayList<Account> accountList = userService.getUsers(1);
-        System.out.println(accountList.size());
         for (Account account : accountList) {
             account.setPassword("");
-            System.out.println("account = " + account);
         }
         return accountList;
     }
