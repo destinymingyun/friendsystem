@@ -91,6 +91,6 @@ function register(data) {
         error: function (msg) {
             console.log("发送失败");
         }
-    });
+    })
 }
 
