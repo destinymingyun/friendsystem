@@ -3,6 +3,8 @@ package com.paqi.friendsystem.mapper;
 import com.paqi.friendsystem.entity.user.Account;
 import org.apache.ibatis.annotations.*;
 
+import java.util.ArrayList;
+
 /**
  * @author PQ
  * @Description 用户账号表数据库操作
@@ -84,4 +86,23 @@ public interface AccountMapper {
             @Result(column="user_type", property="userType")
     })
     Account getAccountEntityByAccountAndPassword(@Param("account") String account, @Param("password") String password);
+
+    /**
+     * 根据用户类型获取用户列表
+     * @author PQ
+     * @Description 根据用户类型获取用户列表
+     * @param userType：用户类型
+     * @return 返回用户列表
+     * @Date 14:12 20/3/2020
+     * @version 3.4.13
+    **/
+    @Select("SELECT * FROM `account` " +
+            "WHERE `user_type` = #{userType}")
+    @Results(value={
+            @Result(column="user_id", property="userId", id=true),
+            @Result(column="account", property="account"),
+            @Result(column="password ", property="password"),
+            @Result(column="user_type", property="userType")
+    })
+    ArrayList<Account> getAllUser(int userType);
 }

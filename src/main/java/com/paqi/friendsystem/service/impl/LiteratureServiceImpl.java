@@ -6,6 +6,8 @@ import com.paqi.friendsystem.service.LiteratureService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+
 /**
  * @author PQ
  * @Description 文章服务类
@@ -42,6 +44,17 @@ public class LiteratureServiceImpl implements LiteratureService {
         } else {
             return false;
         }
+    }
+
+    /**
+     * @author PQ
+     * @Description 根据部落获取对应全部文章
+     * @Date 13:49 20/3/2020
+     * @version 3.4.13
+    **/
+    @Override
+    public ArrayList<Literature> getAllLiteratureInFun(int funId) {
+        return literatureMapper.getLiteratureByFunId(funId);
     }
 
 

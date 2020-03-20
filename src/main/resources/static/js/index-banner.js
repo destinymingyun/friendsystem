@@ -18,5 +18,4 @@ function indexBanner() {
             bannerNum = 1;
         }
     }, 5000);
-
 }

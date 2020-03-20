@@ -15,7 +15,7 @@ $(document).ready(function () {
     var cards = $(".find-password-card");
     cards.css("display", "none");
     $(cards[0]).css("display", "block");
-})
+});
 
 var index = 0;
 function buttonClick() {

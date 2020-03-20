@@ -81,6 +81,12 @@ public class AccountMapperTest {
         Assertions.assertEquals(1, ret);
     }
 
+    /**
+     * @author PQ
+     * @Description 测试登录
+     * @Date 15:34 20/3/2020
+     * @version 3.4.13
+    **/
     @Test
     public void testLogin() {
         Account account = new Account();
@@ -89,5 +95,21 @@ public class AccountMapperTest {
         Account dbAccount = accountMapper
                 .getAccountEntityByAccountAndPassword(account.getAccount(), account.getPassword());
         System.out.println("dbAccount = " + dbAccount);
+    }
+
+    /**
+     * @author PQ
+     * @Description 测试获取全部用户
+     * @Date 15:35 20/3/2020
+     * @version 3.4.13
+    **/
+    @Test
+    public void testgetUsers() {
+        int userType = 1;
+        ArrayList<Account> accounts = accountMapper.getAllUser(1);
+        System.out.println("accounts-size :"+accounts.size());
+        for(Account account : accounts) {
+            System.out.println("account = " + account);
+        }
     }
 }

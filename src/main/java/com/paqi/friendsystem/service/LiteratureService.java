@@ -2,6 +2,8 @@ package com.paqi.friendsystem.service;
 
 import com.paqi.friendsystem.entity.Literature;
 
+import java.util.ArrayList;
+
 /**
  * @author PQ
  * @Description 文章服务类
@@ -30,4 +32,15 @@ public interface LiteratureService {
      * @version 3.3.0
     **/
     boolean deleteLiterature(int literatureId);
+
+    /**
+     * 根据部落id查询该部落所有文章
+     * @author PQ
+     * @Description 查询某兴趣全部文章
+     * @param funId：文章id
+     * @return 文章列表
+     * @Date 13:45 20/3/2020
+     * @version 3.4.13
+    **/
+    ArrayList<Literature> getAllLiteratureInFun(int funId);
 }

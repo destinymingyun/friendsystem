@@ -1,10 +1,9 @@
 package com.paqi.friendsystem.mapper;
 
 import com.paqi.friendsystem.entity.Literature;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.*;
+
+import java.util.ArrayList;
 
 /**
  * @author PQ
@@ -37,6 +36,18 @@ public interface LiteratureMapper {
      * @Date 下午8:17 17/3/2020
      * @version 3.3.0
     **/
-    @Delete("DELETE FROM `literature` WHERE `literature_id` = ${literatureId}")
+    @Delete("DELETE FROM `literature` WHERE `literature_id` = #{literatureId}")
     int deleteLiterature(int literatureId);
+
+    /**
+     * 根据兴趣查询全部文章
+     * @author PQ
+     * @Description 根据兴趣查询全部文章
+     * @param funId：兴趣部落名
+     * @return 返回文章列表
+     * @Date 13:36 20/3/2020
+     * @version 3.4.13
+    **/
+    @Select("SELECT * FROM `literature` WHERE `fun_id` = #{fun_id}")
+    ArrayList<Literature> getLiteratureByFunId(int funId);
 }

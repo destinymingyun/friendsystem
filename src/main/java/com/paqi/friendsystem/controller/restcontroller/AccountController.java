@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.Map;
 
 /**
@@ -34,6 +35,7 @@ public class AccountController {
         if (dbAccount == null) {
             return 0;
         } else {
+            httpServletRequest.setAttribute("account", account);
             return dbAccount.getUserType();
         }
     }
@@ -50,6 +52,12 @@ public class AccountController {
         return userService.checkAccountRepeat(account);
     }
 
+    /**
+     * @author PQ
+     * @Description 注册账号
+     * @Date 14:26 20/3/2020
+     * @version 3.4.11
+    **/
     @PostMapping("/register")
     public int register(@RequestBody  Map<String,Object> map) {
         Account account = new Account();

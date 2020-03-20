@@ -3,6 +3,8 @@ package com.paqi.friendsystem.service;
 import com.paqi.friendsystem.entity.user.Account;
 import com.paqi.friendsystem.entity.user.UserInfo;
 
+import java.util.ArrayList;
+
 /**
  * @author PQ
  * @Description
@@ -66,4 +68,15 @@ public interface UserService {
      * @version 3.4.11
     **/
     Account loginAccount(Account account);
+
+    /**
+     * 根据用户账户类型查询用户列表
+     * @author PQ
+     * @Description 根据用户账户类型查询用户列表
+     * @param userType：用户账户类型
+     * @return 返回用户类型
+     * @Date 14:16 20/3/2020
+     * @version 3.4.13
+    **/
+    ArrayList<Account> getUsers(int userType);
 }

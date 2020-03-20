@@ -8,6 +8,8 @@ import com.paqi.friendsystem.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+
 /**
  * @author PQ
  * @Description 用户接口实现类
@@ -96,5 +98,14 @@ public class UserServiceImpl implements UserService {
         return dbAccount;
     }
 
-
+    /**
+     * @author PQ
+     * @Description 根据用户类型获取用户列表
+     * @Date 14:17 20/3/2020
+     * @version 3.4.13
+    **/
+    @Override
+    public ArrayList<Account> getUsers(int userType) {
+        return accountMapper.getAllUser(userType);
+    }
 }
