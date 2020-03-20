@@ -1,0 +1,19 @@
+/**
+ * @author PQ
+ * @Description 撰写文章
+ * @Date 13:07 20/3/2020
+ * @version 3.4.12
+**/
+
+main {
+    background: #edf1f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main > section {
+    height: 500px;  /*可删除*/
+    background: #f4f4f4;
+    padding-top: 20px;
+}

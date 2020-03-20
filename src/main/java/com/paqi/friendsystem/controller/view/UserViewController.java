@@ -34,4 +34,15 @@ public class UserViewController {
     public String userInfo() {
         return "./user-info";
     }
+
+    /**
+     * @author PQ
+     * @Description 撰写文章
+     * @Date 13:05 20/3/2020
+     * @version 3.4.12
+    **/
+    @GetMapping("/write")
+    public String write() {
+        return "./write";
+    }
 }
