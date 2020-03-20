@@ -40,6 +40,12 @@ public class FunController {
         return false;
     }
 
+    /**
+     * @author PQ
+     * @Description 获取全部部落
+     * @Date 19:59 20/3/2020
+     * @version 3.4.15
+    **/
     @GetMapping("/get-fun-list")
     public ArrayList<Fun> getFun() {
         return funService.getAllFun();

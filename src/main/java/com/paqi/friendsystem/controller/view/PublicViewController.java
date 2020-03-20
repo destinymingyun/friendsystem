@@ -1,7 +1,9 @@
 package com.paqi.friendsystem.controller.view;
 
+import com.paqi.friendsystem.entity.Literature;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -30,8 +32,9 @@ public class PublicViewController {
      * @Date 21:10 18/3/2020
      * @version 3.4.4
     **/
-    @GetMapping("/literature")
-    public String literature() {
+    @GetMapping("/literature/{literatureId}")
+    public String literature(@PathVariable int literatureId) {
+        System.out.println("literatureId = " + literatureId);
         return "./literature";
     }
 

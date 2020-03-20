@@ -50,4 +50,16 @@ public interface LiteratureMapper {
     **/
     @Select("SELECT * FROM `literature` WHERE `fun_id` = #{fun_id}")
     ArrayList<Literature> getLiteratureByFunId(int funId);
+
+    /**
+     * 根据文章id查询文章
+     * @author PQ
+     * @Description 根据文章id查询文章
+     * @param literatureId：文章id
+     * @return 返回文章内容
+     * @Date 21:58 20/3/2020
+     * @version 3.4.17
+    **/
+    @Select("SELECT * FROM `literature` WHERE `literature_id` = #{literatureId}")
+    Literature getLiteratureByliteratureId(int literatureId);
 }

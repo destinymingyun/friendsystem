@@ -29,9 +29,9 @@ public class LiteratureMapperTest {
     public void testPostLiterature() {
         Literature literature = new Literature();
         literature.setAuthorId(5);
-        literature.setContext("Hello World");
+        literature.setContext("Hello World5");
         literature.setFunId(1);
-        literature.setTitle("this is title");
+        literature.setTitle("this is title5");
         literature.setCreateTime(new Date());
         int ret = literatureMapper.postLiterature(literature);
         Assertions.assertEquals(1, ret);
