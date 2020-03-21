@@ -1,0 +1,49 @@
+/**
+ * @author PQ
+ * @Description 文章标签
+ * @Date 16:51 21/3/2020
+ * @version 3.4.21
+**/
+article {
+    height: 200px;
+    background: white;
+    border: 1px solid #eaeaea;
+}
+
+article:hover {
+    border: 1px solid #19abbd;
+    background: #FBFDFF;
+}
+
+article > .article-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 5px;
+}
+
+article > .article-title > h2 {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px auto 0px 20px;
+}
+
+article > .article-title > h2:hover {
+    color: #26c6da;
+}
+
+article > .article-title > time {
+    margin-right: 30px;
+}
+
+article > .article-context {
+    border-top: 1px solid #eaeaea;
+    padding-top: 20px;
+    margin: 0 20px;
+    font-size: 16px;
+    color: #999;
+    height: 140px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}

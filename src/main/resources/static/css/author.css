@@ -1,0 +1,43 @@
+/**
+ * @author PQ
+ * @Description 作者信息卡片栏样式
+ * @Date 14:43 21/3/2020
+ * @version 3.4.21
+**/
+
+.author-box {
+    background: white;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #19abbd;
+    border-radius: 15px;
+    box-shadow: #707070 5px 5px 5px;
+}
+
+.author-box > h2 {
+    border-radius: 15px 15px 0 0;
+    padding: 10px 0;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background: #19abbd;
+}
+
+.author-box > h3 {
+    border-bottom: #19abbd 2px solid;
+    padding: 10px 10px 10px 30px;
+    text-align: start;
+}
+
+.author-box > h3:last-child {
+    border-bottom: none;
+    border-radius: 0 0 15px 15px;
+}
+
+.author-box > h3:hover {
+    color: white;
+    background: #26c6da;
+    text-shadow: #707070 1px 1px 3px;
+}

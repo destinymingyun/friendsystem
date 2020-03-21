@@ -24,10 +24,10 @@ function login(data) {
                 $(".login-error").css("display", "block");
             } else if(code == -1){
                 console.log("账户已被禁用");
-            } else if (code == 1){
+            } else if (code == 2){
                 window.location.href = "/admin/index";
-            } else if (code == 2) {
-
+            } else if (code == 1) {
+                window.location.href = "/public/index";
             } else {
                 console.log("???");
             }

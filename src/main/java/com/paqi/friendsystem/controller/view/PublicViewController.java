@@ -50,7 +50,7 @@ public class PublicViewController {
         Literature literature1 = new Literature();
         literature1.setTitle("页面出错啦！！！");
         literature1.setContext("该话题不存在或您无权访问，请登录后试试？");
-//        Account account = (Account)(httpServletRequest.getSession().getAttribute("user"));
+//        Account account = (Account)(httpServletRequest.getSession().getAttribute("account"));
         Account account = new Account();
         account.setUserType(2);
         account.setUserType(2);

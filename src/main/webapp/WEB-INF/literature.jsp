@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="/static/css/normal.css" type="text/css"/>
     <link rel="stylesheet" href="/static/css/footer.css" type="text/css"/>
     <link rel="stylesheet" href="/static/css/literature.css" type="text/css"/>
+    <link rel="stylesheet" href="/static/css/author.css" type="text/css"/>
+    <link rel="stylesheet" href="/static/css/article.css" type="text/css"/>
 </head>
 <body>
 <%@include file="/WEB-INF/public/nav.jsp" %>
