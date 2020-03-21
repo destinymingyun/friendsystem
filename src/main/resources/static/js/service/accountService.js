@@ -21,7 +21,7 @@ function login(data) {
         success: function (code) {
             console.log(code);
             if (code == 0) {
-                $(".login-error").css("display", "block");
+                $(".error").css("display", "block");
             } else if(code == -1){
                 console.log("账户已被禁用");
             } else if (code == 2){

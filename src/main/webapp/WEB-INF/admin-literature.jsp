@@ -22,7 +22,7 @@
     <%@include file="/WEB-INF/public/admin-nav.jsp" %>
     <main>
         <header>
-            <div>欢迎您！TPQ</div>
+            <div>你好!${account.account}</div>
         </header>
         <div class="admin-banner">
             <img src="/static/img/admin-banner.jpg">
