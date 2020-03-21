@@ -25,6 +25,19 @@ function selectAllUser(list) {
  * @version 3.4.15
 **/
 function change(userId, status) {
-    alert(userId);
-    alert(status);
+    if (status == 0) {
+        status = 1;
+    } else {
+        status = 0;
+    }
+    var data = {
+        "userId": userId,
+        "status": status
+    };
+    changeUserStatus(data, function (boolean) {
+        if (boolean) {
+            alert("用户状态修改成功");
+            window.location.href = "/admin/user";
+        }
+    })
 }

@@ -29,13 +29,11 @@ public class AccountController {
     **/
     @PostMapping("/login")
     public int login(@RequestBody Account account, HttpServletRequest httpServletRequest) {
-        System.out.println("account = " + account);
         Account dbAccount = userService.loginAccount(account);
-        System.out.println("dbAccount = " + dbAccount);
         if (dbAccount == null) {
             return 0;
         } else {
-            httpServletRequest.setAttribute("account", account);
+            httpServletRequest.getSession().setAttribute("account", account);
             return dbAccount.getUserType();
         }
     }

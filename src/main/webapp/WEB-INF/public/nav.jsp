@@ -13,11 +13,14 @@
         <div class="nav-item">
             <ul>
                 <li><a class="active" href="#">当前活动</a></li>
-                <li><a href="#">兴趣部落</a></li>
-                <li><a href="#">创建话题</a></li>
-                <li><a href="#">登录</a></li>
+                <li><a href="/public/literature-list">兴趣部落</a></li>
+                <li><a href="/api/literature/write">创建话题</a></li>
+                <li><a href="${account.account==null?"/public/login":"#"}">
+                    ${account.account==null?"登录":"你好"+account.account}
+                </a></li>
             </ul>
         </div>
     </div>
 </nav>
+<%--<script type="text/javascript" language="JavaScript" src="/static/js/nav.js"></script>--%>
 </html>

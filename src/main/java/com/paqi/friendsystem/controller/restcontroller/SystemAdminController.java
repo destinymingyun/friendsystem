@@ -45,6 +45,7 @@ public class SystemAdminController {
     **/
     @PutMapping("status")
     public boolean setUserStatus(int userId,int status) {
+        System.out.println("userId = " + userId);
         return userService.setUserStatus(userId, status);
     }
 }

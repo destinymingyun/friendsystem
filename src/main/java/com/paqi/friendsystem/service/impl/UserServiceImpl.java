@@ -118,7 +118,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean setUserStatus(int userId, int status) {
         Integer ret = accountMapper.putAccountStatus(userId, status);
-        if (ret == null) {
+        if (ret == null || ret == 0) {
             return false;
         } else {
             return true;

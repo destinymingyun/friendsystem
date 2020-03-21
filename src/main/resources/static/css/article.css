@@ -1,40 +1,9 @@
 /**
  * @author PQ
- * @Description 用户个人信息
- * @Date 01:37 19/3/2020
- * @version 3.4.8
+ * @Description 文章标签
+ * @Date 16:51 21/3/2020
+ * @version 3.4.21
 **/
-
-main {
-    background: #edf1f2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.literature-list-box {
-    flex-grow: 1;
-    background: #f4f4f4;
-    padding-top: 20px;
-    min-height: 800px;
-}
-
-.literature-list-box > header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-.literature-list-box > header > h1 {
-    margin-left: 15px;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.literature-list-box > header > data {
-    margin-right: 30px;
-}
-
 article {
     height: 200px;
     background: white;
@@ -76,6 +45,5 @@ article > .article-context {
     height: 140px;
     display: -webkit-box;
     overflow: hidden;
-　　-webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }

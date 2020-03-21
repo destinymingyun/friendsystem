@@ -13,56 +13,32 @@
     <link rel="stylesheet" href="/static/css/normal.css" type="text/css"/>
     <link rel="stylesheet" href="/static/css/footer.css" type="text/css"/>
     <link rel="stylesheet" href="/static/css/literature-list.css" type="text/css"/>
+    <link rel="stylesheet" href="/static/css/fun-box.css" type="text/css"/>
 </head>
 <body>
 <main>
     <%@include file="/WEB-INF/public/nav.jsp" %>
-    <section class="literature-list-box normal-width">
+    <section class="fun-box normal-width">
+        <ul id="fun"></ul>
+    </section>
+    <section class="literature-list-box normal-width" id="literature-box">
         <header>
-            <h1>历史爱好者</h1><data>部落人数:1234人</data>
+            <h1 id="fun-name"> </h1>
+            <data id="people-num"> </data>
         </header>
-        <article class="first">
-            <div class="article-title"><h2>三国</h2>
-                <time>2020-01-20</time>
-            </div>
-            <div class="article-context">
-                  东汉末年，外戚专权，宦官秉政，政治腐败，天灾不断。汉灵帝中平元年（184年），黄巾起义爆发，从此开始了近一百年的战乱时代。
-                黄巾起义被镇压后，外戚、宦官在内斗中失去权柄，永汉元年（189年），董卓控制朝廷 [3] ，初平三年（192年），董卓被吕布所杀，李傕、郭汜控制东汉王朝 [8]
-                。地方州郡长官在反董卓战争及后来的相互攻伐中逐渐壮大实力，形成了地方军阀割据 [9-11] 。
-            </div>
-        </article>
-        <article >
-            <div class="article-title"><h2>三国</h2>
-                <time>2020-01-20</time>
-            </div>
-            <div class="article-context">
-                东汉末年，外戚专权，宦官秉政，政治腐败，天灾不断。汉灵帝中平元年（184年），黄巾起义爆发，从此开始了近一百年的战乱时代。
-                黄巾起义被镇压后，外戚、宦官在内斗中失去权柄，永汉元年（189年），董卓控制朝廷 [3] ，初平三年（192年），董卓被吕布所杀，李傕、郭汜控制东汉王朝 [8]
-                。地方州郡长官在反董卓战争及后来的相互攻伐中逐渐壮大实力，形成了地方军阀割据 [9-11] 。
-            </div>
-        </article>
-        <article >
-            <div class="article-title"><h2>三国</h2>
-                <time>2020-01-20</time>
-            </div>
-            <div class="article-context">
-                东汉末年，外戚专权，宦官秉政，政治腐败，天灾不断。汉灵帝中平元年（184年），黄巾起义爆发，从此开始了近一百年的战乱时代。
-                黄巾起义被镇压后，外戚、宦官在内斗中失去权柄，永汉元年（189年），董卓控制朝廷 [3] ，初平三年（192年），董卓被吕布所杀，李傕、郭汜控制东汉王朝 [8]
-                。地方州郡长官在反董卓战争及后来的相互攻伐中逐渐壮大实力，形成了地方军阀割据 [9-11] 。
-            </div>
-        </article>
-        <article >
-            <div class="article-title"><h2>三国</h2>
-                <time>2020-01-20</time>
-            </div>
-            <div class="article-context">
-                东汉末年，外戚专权，宦官秉政，政治腐败，天灾不断。汉灵帝中平元年（184年），黄巾起义爆发，从此开始了近一百年的战乱时代。
-                黄巾起义被镇压后，外戚、宦官在内斗中失去权柄，永汉元年（189年），董卓控制朝廷 [3] ，初平三年（192年），董卓被吕布所杀，李傕、郭汜控制东汉王朝 [8]
-                。地方州郡长官在反董卓战争及后来的相互攻伐中逐渐壮大实力，形成了地方军阀割据 [9-11] 。
-            </div>
-        </article>
     </section>
     <%@include file="/WEB-INF/public/footer.jsp" %>
 </main>
+<script type="text/javascript" language="JavaScript" src="/webjars/jquery/3.4.1/dist/jquery.js"></script>
+<script type="text/javascript" language="JavaScript" src="/static/js/service/funService.js"></script>
+<script type="text/javascript" language="JavaScript" src="/static/js/service/literatureService.js"></script>
+<script type="text/javascript" language="JavaScript" src="/static/js/literature-list.js"></script>
+<script type="text/javascript" language="JavaScript">
+    $(document).ready(function () {
+        getFun(function (list) {
+            funForeach(list)
+        })
+    })
+</script>
 </body>
 </html>

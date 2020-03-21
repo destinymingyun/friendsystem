@@ -31,14 +31,13 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th>用户Id</th>
-                    <th>用户账户</th>
-                    <th>用户账户状态</th>
+                    <th>待审核话题id</th>
+                    <th>话题题目</th>
+                    <th>话题链接</th>
                     <th>操作</th>
                 </tr>
                 </thead>
                 <tbody id="tbody">
-
                 </tbody>
             </table>
         </section>
@@ -47,11 +46,15 @@
 </div>
 <script type="text/javascript" src="/webjars/jquery/3.4.1/dist/jquery.js"></script>
 <script type="text/javascript" language="JavaScript" src="/static/js/service/adminService.js"></script>
-<script type="text/javascript" language="JavaScript" src="/static/js/selectAllUser.js"></script>
+<script type="text/javascript" language="JavaScript" src="/static/js/service/literatureService.js"></script>
+<script type="text/javascript" language="JavaScript" src="/static/js/selectAllLiterature.js"></script>
 <script type="text/javascript">
     window.onload = function () {
-        getUsers(function (list) {
-            selectAllUser(list)
+        var data = {
+            "status": 1
+        }
+        getLiteratureByStatus(data, function (list) {
+            selectAllLiterature(list);
         });
     }
 </script>

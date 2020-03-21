@@ -57,5 +57,30 @@ public class LiteratureServiceImpl implements LiteratureService {
         return literatureMapper.getLiteratureByFunId(funId);
     }
 
+    /**
+     * @author PQ
+     * @Description 根据状态获取文章
+     * @Date 23:44 20/3/2020
+     * @version 3.4.19
+    **/
+    @Override
+    public ArrayList<Literature> getLiteratureByStatus(int status) {
+        return literatureMapper.getLiteratureByStatus(status);
+    }
 
+    /**
+     * @author PQ
+     * @Description 更新文章状态
+     * @Date 00:50 21/3/2020
+     * @version 3.4.19
+    **/
+    @Override
+    public boolean updateLiterature(int literatureId, int status) {
+        Integer ret = literatureMapper.putStatusByLiteratureId(literatureId, status);
+        if (ret == null || ret == 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }

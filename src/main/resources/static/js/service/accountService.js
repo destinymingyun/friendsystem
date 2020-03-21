@@ -21,13 +21,13 @@ function login(data) {
         success: function (code) {
             console.log(code);
             if (code == 0) {
-                $(".login-error").css("display", "block");
+                $(".error").css("display", "block");
             } else if(code == -1){
                 console.log("账户已被禁用");
-            } else if (code == 1){
+            } else if (code == 2){
                 window.location.href = "/admin/index";
-            } else if (code == 2) {
-
+            } else if (code == 1) {
+                window.location.href = "/public/index";
             } else {
                 console.log("???");
             }
@@ -57,7 +57,7 @@ function repeatAccount(data) {
                 $("#account").css("border-color", "#DC143C");
                 $(".error").css("display", "block");
             } else {
-                $("#account").css("border-color", "black");
+                $("#account").css("border-color", "green");
                 $(".error").css("display", "none");
             }
         },
