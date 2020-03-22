@@ -53,4 +53,16 @@ public interface FunMapper {
     **/
     @Select("SELECT * FROM `fun`")
     ArrayList<Fun> getAll();
+
+    /**
+     * @author PQ
+     * @Description
+     * @param introduction:部落描述
+     * @param funId：部落名
+     * @return 返回受影响的行数
+     * @Date 15:29 22/3/2020
+     * @version
+    **/
+    @Update("UPDATE `fun` SET `introduction` = #{introduction} WHERE `fun_id` = #{fun_id}")
+    Integer putFunIntroduction(String introduction, int funId);
 }

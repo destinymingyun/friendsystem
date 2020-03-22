@@ -65,4 +65,12 @@ public interface FunService {
      * @version 3.4.14
     **/
     ArrayList<Fun> getAllFun();
+
+    /**
+     * @author PQ
+     * @Description
+     * @Date 15:36 22/3/2020
+     * @version 
+    **/
+    boolean changeFunintroduction(String introduction, int funId);
 }

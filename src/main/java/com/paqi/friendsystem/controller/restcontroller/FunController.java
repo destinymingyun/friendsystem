@@ -1,13 +1,11 @@
 package com.paqi.friendsystem.controller.restcontroller;
 
 import com.paqi.friendsystem.entity.Fun;
+import com.paqi.friendsystem.entity.relation.FunMember;
 import com.paqi.friendsystem.entity.user.Account;
 import com.paqi.friendsystem.service.FunService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
@@ -56,4 +54,39 @@ public class FunController {
     public ArrayList<Fun> getFun() {
         return funService.getAllFun();
     }
+
+    /**
+     * @author PQ
+     * @Description 更改部落拥有者
+     * @Date 14:21 22/3/2020
+     * @version 3.4.24
+    **/
+    @PutMapping("/update-owner")
+    public boolean changeOwner(int newOwnerId, int funId, HttpServletRequest httpServletRequest) {
+//        int oldOwnerId = ((Account)(httpServletRequest.getSession().getAttribute("account"))).getUserId();
+        int oldOwnerId = 6;
+        return funService.changeOwner(newOwnerId, oldOwnerId, funId);
+    }
+
+    /**
+     * @author PQ
+     * @Description 加入部落
+     * @Date 14:24 22/3/2020
+     * @version 3.4.24
+    **/
+    @PostMapping("/join-fun")
+    public boolean joinFun(int funId, HttpServletRequest httpServletRequest) {
+        int userId = ((Account)(httpServletRequest.getSession().getAttribute("account"))).getUserId();
+        FunMember funMember = new FunMember();
+        funMember.setMemberId(userId);
+        funMember.setFunId(funId);
+        int ret = funService.joinFun(funMember);
+        if (ret == 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+
 }

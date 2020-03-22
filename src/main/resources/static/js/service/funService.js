@@ -53,3 +53,26 @@ function createFun(fun, func) {
         }
     })
 }
+
+/**
+ * @author PQ
+ * @Description 加入一个部落
+ * @param funId：示例
+ * {"funId": funId}
+ * @param func：回调函数
+ * @Date 14:27 22/3/2020
+ * @version 3.4.24
+**/
+function joinFun(funId, func) {
+    $.ajax({
+        url: "/api/fun/create-fun",
+        type: "POST",
+        data: funId,
+        success: function (boolean) {
+            func(boolean);
+        },
+        error: function (msg) {
+            console.log("发送失败");
+        }
+    })
+}
