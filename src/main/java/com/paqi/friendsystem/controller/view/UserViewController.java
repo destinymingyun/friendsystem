@@ -81,4 +81,7 @@ public class UserViewController {
     **/
     @GetMapping("/transfer-fun")
     public String transferFun(){return "./transfer-fun";}
+
+    @GetMapping("/literature-write")
+    public String literatureWrite(){return "./literature-write";}
 }
