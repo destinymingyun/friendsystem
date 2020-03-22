@@ -54,27 +54,7 @@ function createFun(fun, func) {
     })
 }
 
-/**
- * @author PQ
- * @Description 点击进入该文章页面
- * @Date 21:43 20/3/2020
- * @version 3.4.17
- **/
-function findAllFun(list) {
-    for(var i=1;i<list.length;i++){
-        var info = `
-            <div class="card">
-                <div class="title"><p>${list[i].funName}</p></div>
-                <div class="content"><p>${list[i].introduction}</p></div>
-                <div class="button"><button class="button-content">加入</button></div>
-            </div>
-            `
-        $(".fun-card-box").append(info)
-    }
 
-
-
-}
 
 /**
  * @author PQ

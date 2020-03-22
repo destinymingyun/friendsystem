@@ -72,13 +72,15 @@
 </footer>
 <script type="text/javascript" src="/webjars/jquery/3.4.1/dist/jquery.js"></script>
 <script type="text/javascript" src="/static/js/service/funService.js"></script>
+<script type="text/javascript" src="/static/js/findAllFun.js"></script>
+<script type="text/javascript" src="/static/js/joinFun.js"></script>
+<script type="text/javascript" src="/static/js/service/joinFun.js"></script>
 <script type="text/javascript">
     window.onload=function () {
         getFun(function(list){
             findAllFun(list)
         })
     }
-    $(".button").click
 </script>
 </body>
 </html>

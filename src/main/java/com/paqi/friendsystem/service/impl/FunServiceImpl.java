@@ -94,4 +94,9 @@ public class FunServiceImpl implements FunService {
     public ArrayList<Fun> getAllFun() {
         return funMapper.getAll();
     }
+
+    @Override
+    public boolean changeFunintroduction(String introduction, int funId) {
+        return false;
+    }
 }
