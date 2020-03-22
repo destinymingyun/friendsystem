@@ -96,7 +96,7 @@ public class FunServiceImpl implements FunService {
     }
 
     @Override
-    public boolean changeFunintroduction(String introduction, int funId) {
+    public boolean changeFunIntroduction(String introduction, int funId) {
         return false;
     }
 }

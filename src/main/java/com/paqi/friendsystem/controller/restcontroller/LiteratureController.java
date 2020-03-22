@@ -1,7 +1,9 @@
 package com.paqi.friendsystem.controller.restcontroller;
 
+import com.paqi.friendsystem.entity.Discuss;
 import com.paqi.friendsystem.entity.Literature;
 import com.paqi.friendsystem.entity.user.Account;
+import com.paqi.friendsystem.service.DiscussService;
 import com.paqi.friendsystem.service.LiteratureService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +23,9 @@ import java.util.Date;
 public class LiteratureController {
     @Autowired
     private LiteratureService literatureService;
+
+    @Autowired
+    private DiscussService discussService;
 
     /**
      * @author PQ
@@ -68,5 +73,25 @@ public class LiteratureController {
     @PutMapping("/update-status")
     public boolean changeLiteratureStatus(int literatureId, int status) {
         return literatureService.updateLiterature(literatureId, status);
+    }
+
+    /**
+     * @author PQ
+     * @Description 为文章添加一条评论
+     * @Date 16:47 22/3/2020
+     * @version 3.4.24
+    **/
+    @PostMapping("/write-discuss")
+    public boolean writeDiscuss(Discuss discuss, HttpServletRequest httpServletRequest) {
+//        int userId = ((Account)(httpServletRequest.getSession().getAttribute("account"))).getUserId();
+        int userId = 5;
+        discuss.setCreateTime(new Date());
+        discuss.setAuthorId(userId);
+        int ret = discussService.addDiscuss(discuss);
+        if (ret == 0) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }
