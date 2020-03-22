@@ -46,15 +46,39 @@ public class UserViewController {
         return "./write";
     }
 
+    /**
+     * @author PQ
+     * @Description 创建部落页面
+     * @Date 13:42 22/3/2020
+     * @version 3.4.22
+    **/
     @GetMapping("/create-fun")
     public String createFun(){return "./create-fun";}
 
+    /**
+     * @author PQ
+     * @Description
+     * @Date 13:42 22/3/2020
+     * @version 3.4.22
+    **/
     @GetMapping("/alter-fun")
     public String alterFun(){return "./alter-fun";}
 
+    /**
+     * @author PQ
+     * @Description 关注部落
+     * @Date 13:43 22/3/2020
+     * @version 3.4.22
+    **/
     @GetMapping("/join-fun")
     public String joinFun(){return "./join-fun";};
 
+    /**
+     * @author PQ
+     * @Description 转让部落
+     * @Date 13:43 22/3/2020
+     * @version 3.4.22
+    **/
     @GetMapping("/transfer-fun")
     public String transferFun(){return "./transfer-fun";}
 }

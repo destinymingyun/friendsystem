@@ -23,8 +23,8 @@ public interface FunMapper {
      * @Date 下午1:23 17/3/2020
      * @version 3.2.0
     **/
-    @Insert("INSERT INTO `fun`(`fun_name`, `builder_id`, `member_num`, `literature_num`, `owner_id`, `create_time`) " +
-            "VALUES(#{funName}, #{builderId}, #{memberNum}, #{literatureNum}, #{ownerId}, #{createTime})")
+    @Insert("INSERT INTO `fun`(`fun_name`, `builder_id`, `member_num`, `literature_num`, `owner_id`, `introduction`, `create_time`) " +
+            "VALUES(#{funName}, #{builderId}, #{memberNum}, #{literatureNum}, #{ownerId}, #{introduction}, #{createTime})")
     @Options(useGeneratedKeys = true, keyProperty = "funId", keyColumn = "fun_id")
     int postFun(Fun fun);
 

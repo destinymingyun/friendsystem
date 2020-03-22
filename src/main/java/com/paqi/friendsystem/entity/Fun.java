@@ -18,4 +18,5 @@ public class Fun {
     private long memberNum;
     private long literatureNum;
     private Date createTime;
+    private String introduction;
 }

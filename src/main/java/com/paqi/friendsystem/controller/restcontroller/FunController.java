@@ -31,13 +31,19 @@ public class FunController {
      * @Date 15:16 20/3/2020
      * @version 3.4.13
     **/
-    @PostMapping("/api/create-fun")
+    @PostMapping("/create-fun")
     public boolean createFun(Fun fun, HttpServletRequest httpServletRequest) {
-        int userId = ((Account)(httpServletRequest.getSession().getAttribute("account"))).getUserId();
+//        int userId = ((Account)(httpServletRequest.getSession().getAttribute("account"))).getUserId();
+        int userId = 6;
         fun.setCreateTime(new Date());
         fun.setBuilderId(userId);
-        funService.createFun(fun);
-        return false;
+        fun.setOwnerId(userId);
+        int funid = funService.createFun(fun);
+        if (funid == 0) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     /**

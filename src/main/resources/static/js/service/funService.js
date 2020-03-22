@@ -23,3 +23,33 @@ function getFun(func) {
         }
     })
 }
+
+/**
+ * @author PQ
+ * @Description 创建一个部落
+ * @param fun：兴趣部落的json格式 示例
+ *       {
+             "funName": "TestFunName",
+             "introduction": "TestFunIntroduction"
+        }
+ * @param func：回调函数（func（boolean）），成功返回true，失败返回false
+ * 示例：
+ * createFun(fun, function (boolena) {
+            console.log(boolena)
+        });
+ * @Date 13:42 22/3/2020
+ * @version 3.4.23
+**/
+function createFun(fun, func) {
+    $.ajax({
+        url: "/api/fun/create-fun",
+        type: "POST",
+        data: fun,
+        success: function (boolean) {
+            func(boolean);
+        },
+        error: function (msg) {
+            console.log("发送失败");
+        }
+    })
+}
