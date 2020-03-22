@@ -45,4 +45,10 @@ public class UserViewController {
     public String write() {
         return "./write";
     }
+
+    @GetMapping("/create-fun")
+    public String createFun(){return "./create-fun";}
+
+    @GetMapping("/alter-fun")
+    public String alterFun(){return "./alter-fun";}
 }

@@ -1,0 +1,57 @@
+.fun-card-box{
+    background: #FFFFCC;
+    height: 600px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+}
+
+.fun-card-box .card{
+    width: 300px;
+    height: 300px;
+    border: #19abbd 1px solid;
+    margin: 0 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.fun-card-box .card .title{
+    width: 250px;
+    height: 50px;
+    margin: 20px auto;
+    overflow: hidden;
+    text-align: center;
+    border-bottom: 1px solid grey;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+.fun-card-box .card .content{
+    width: 250px;
+    height: 100px;
+    margin: 10px auto;
+    overflow: hidden;
+    text-align: center;
+    font-size: 18px;
+
+}
+.fun-card-box .card .button{
+    width: 250px;
+    margin: 10px auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.fun-card-box .card .button-content{
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #dfe6e9;
+
+}
