@@ -78,6 +78,8 @@ public class LiteratureController {
     /**
      * @author PQ
      * @Description 为文章添加一条评论
+     * @param discuss：评论
+     * @return 添加成功返回true，否则返回false
      * @Date 16:47 22/3/2020
      * @version 3.4.24
     **/
@@ -93,5 +95,16 @@ public class LiteratureController {
         } else {
             return true;
         }
+    }
+
+    /**
+     * @author PQ
+     * @Description 根据文章id获取文章内容
+     * @Date 17:22 22/3/2020
+     * @version 3.4.24
+    **/
+    @GetMapping("/get-literature-list")
+    public ArrayList<Discuss> getDiscussList(int literatureId) {
+        return discussService.getDiscussList(literatureId);
     }
 }

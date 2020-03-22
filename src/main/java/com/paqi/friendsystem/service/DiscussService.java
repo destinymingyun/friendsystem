@@ -2,6 +2,8 @@ package com.paqi.friendsystem.service;
 
 import com.paqi.friendsystem.entity.Discuss;
 
+import java.util.ArrayList;
+
 /**
  * @author PQ
  * @Description 评论服务接口
@@ -19,4 +21,15 @@ public interface DiscussService {
      * @version 3.3.0
     **/
     int addDiscuss(Discuss discuss);
+
+    /**
+     * 根据文章id获取评论列表
+     * @author PQ
+     * @Description 根据文章id获取评论
+     * @param literatureId：文章id
+     * @return 返回评论列表
+     * @Date 17:17 22/3/2020
+     * @version
+    **/
+    ArrayList<Discuss> getDiscussList(int literatureId);
 }

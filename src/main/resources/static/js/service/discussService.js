@@ -30,3 +30,27 @@ function writeDiscuss(discuss, func) {
         }
     });
 }
+
+/**
+ * @author PQ
+ * @Description 根据文章id获取文章list
+ * @param：literatureId: {
+ *     "literatureId": literatureId
+ * }
+ * @param:func: func(list)
+ * @Date 17:23 22/3/2020
+ * @version
+**/
+function getDiscussList(literatureId, func) {
+    $.ajax({
+        url: "/api/literature/write-discuss",
+        type: "GET",
+        data: literatureId,
+        success: function (list) {
+            func(list);
+        },
+        error: function (msg) {
+            console.log("发送失败");
+        }
+    });
+}

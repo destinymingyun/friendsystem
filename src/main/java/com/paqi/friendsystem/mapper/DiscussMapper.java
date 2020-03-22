@@ -1,10 +1,9 @@
 package com.paqi.friendsystem.mapper;
 
 import com.paqi.friendsystem.entity.Discuss;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.*;
+
+import java.util.ArrayList;
 
 /**
  * @author PQ
@@ -39,4 +38,16 @@ public interface DiscussMapper {
     **/
     @Delete("DELETE FROM `discuss` WHERE `literature_id` = ${literatureId}")
     int deleteDiscussByLiteratureId(int literatureId);
+
+    /**
+     * 根据文章id获取评论列表
+     * @author PQ
+     * @Description 根据文章id查询所有评论
+     * @param literatureId：文章id、
+     * @return 评论列表
+     * @Date 17:15 22/3/2020
+     * @version 3.4.24
+    **/
+    @Select("SELECT * FROM `discuss` WHERE `literature_id` = #{literatureId}")
+    ArrayList<Discuss> getDiscussByLiteratureId(int literatureId);
 }
