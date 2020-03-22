@@ -60,5 +60,23 @@
     </div>
 </footer>
 <script type="text/javascript" src="/webjars/jquery/3.4.1/dist/jquery.js"></script>
+<script type="text/javascript" src="/static/js/service/funService.js"></script>
+<script type="text/javascript">
+    $(".button").click(function(){
+        var fun = {
+            "funName": $(".input-title").val(),
+            "introduction": $(".input-content").val()
+        }
+        createFun(fun, function (boolean) {
+            if(boolean==true){
+                if(confirm("创建成功？您要查看完成的新区部落吗？")){
+                    window.location.href="/user/join-fun";
+                }
+            }else{
+                alert("创建失败");
+            }
+        });
+    })
+</script>
 </body>
 </html>
