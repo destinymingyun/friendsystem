@@ -54,7 +54,7 @@ public class PublicViewController {
         Account account = new Account();
         account.setUserType(2);
         account.setUserType(2);
-        account.setUserId(5);
+        account.setUserId(8);
         UserInfo userInfo = new UserInfo();
         userInfo.setUserName("");
         userInfo.setAge(0);
@@ -65,10 +65,13 @@ public class PublicViewController {
             System.out.println("错误1");
             modelAndView.addObject("literature", literature1);
         }
-        if (account.getUserType() == 1 && literature.getStatus() == 0 && account.getUserId() != literature.getAuthorId()) {
+        if (account.getUserType() == 1 && literature.getStatus() == 0) {
             System.out.println("错误2");
             modelAndView.addObject("literature", literature1);
-        } else {
+        } else if (account.getUserType() == 0){
+
+        }
+        else {
             System.out.println("正确");
             modelAndView.addObject("literature", literature);
             userInfo = userInfoMapper.getUserInfoById(account.getUserId());

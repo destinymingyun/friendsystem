@@ -32,7 +32,7 @@
         <div class="main-panel">
             <section class="literature-list-box">
                 <article>
-                    <div class="article-title"><h2>aaa</h2>
+                    <div class="article-title"><h2>{}</h2>
                         <time>12:20:20</time>
                     </div>
                     <div class="article-context">
