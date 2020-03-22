@@ -61,16 +61,21 @@ public interface FunService {
     /**
      * @author PQ
      * @Description 获取全部兴趣
+     * @return 返回兴趣列表
      * @Date 17:35 20/3/2020
      * @version 3.4.14
     **/
     ArrayList<Fun> getAllFun();
 
     /**
+     * 修改部落简介
      * @author PQ
-     * @Description
+     * @Description 修改部落简介
+     * @param introduction：部落描述
+     * @param funId：部落id
+     * @return 修改成功返回true，否则返回false
      * @Date 15:36 22/3/2020
-     * @version 
+     * @version 3.4.24
     **/
-    boolean changeFunintroduction(String introduction, int funId);
+    boolean changeFunIntroduction(String introduction, int funId);
 }

@@ -88,5 +88,14 @@ public class FunController {
         }
     }
 
-
+    /**
+     * @author PQ
+     * @Description 修改部落主页
+     * @Date 15:54 22/3/2020
+     * @version 3.4.24
+    **/
+    @PutMapping("/change-introduction")
+    public boolean changeFunIntroduction(String introduction, int funId, HttpServletRequest httpServletRequest) {
+        return funService.changeFunIntroduction(introduction, funId);
+    }
 }
