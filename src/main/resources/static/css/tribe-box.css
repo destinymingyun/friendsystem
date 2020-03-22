@@ -1,16 +1,16 @@
 .fun-card-box{
     background: #FFFFCC;
-    height: 600px;
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items:center;
+    overflow: hidden;
 }
 
 .fun-card-box .card{
     width: 300px;
     height: 300px;
-    margin: 0 20px;
+    margin: 20px 20px;
     border-radius: 20px;
     border: #19abbd 1px solid;
     overflow: hidden;
