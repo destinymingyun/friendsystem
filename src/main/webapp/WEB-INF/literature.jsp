@@ -20,7 +20,7 @@
 </head>
 <body>
 <%@include file="/WEB-INF/public/nav.jsp" %>
-<header>
+<header>'
     <img id="banner" src="/static/img/banner.png" style="width: 100%; height: 200px">
 </header>
 <mian>

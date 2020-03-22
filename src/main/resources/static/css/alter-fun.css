@@ -1,0 +1,29 @@
+.fun-card-box .card .content{
+    width: 250px;
+    height: 100px;
+    margin: 10px auto;
+    overflow: hidden;
+    text-align: center;
+    font-size: 18px;
+
+}
+.fun-card-box .card .button{
+    width: 250px;
+    margin: 10px auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.fun-card-box .card .button-content{
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #dfe6e9;
+
+}
