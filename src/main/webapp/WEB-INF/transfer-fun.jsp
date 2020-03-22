@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
-  Date: 2020/3/21
-  Time: 22:04
+  Date: 2020/3/22
+  Time: 0:31
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/static/css/footer.css" type="text/css"/>
     <link rel="stylesheet" href="/static/css/index-main.css" type="text/css"/>
     <link rel="stylesheet" href="/static/css/tribe-box.css" type="text/css"/>
-    <link rel="stylesheet" href="/static/css/create-fun.css" type="text/css"/>
+    <link rel="stylesheet" href="/static/css/transfer-fun.css" type="text/css"/>
 
 
 </head>
@@ -40,15 +40,25 @@
     <section class="activities">
         <div class="normal-width">
             <div class="activities-title">
-                <h2>欢迎来到您的兴趣部落</h2>
-                <h6>您可以在此创建任意您喜欢的兴趣</h6>
+                <h2>部落转让</h2>
+                <h6>您可以在转出任意部落</h6>
             </div>
         </div>
         <div class="fun-card-box normal-width">
-            <div class="jumbotron">
-                <h1><input  class="input-title" value="请输入标题!"></h1>
-                <input class="input-content" value="请输入兴趣部落的内容">
-                <p><button class="button" href="#" role="button">创建兴趣部落</button></p>
+            <div class="card">
+                <div class="title"><p>title</p></div>
+                <div class="content"><input value="请输入转让的用户"></div>
+                <div class="button"><button class="button-content">转让</button></div>
+            </div>
+            <div class="card">
+                <div class="title"><p>title</p></div>
+                <div class="content"><input value="请输入转让的用户"></div>
+                <div class="button"><button class="button-content">转让</button></div>
+            </div>
+            <div class="card">
+                <div class="title"><p>title</p></div>
+                <div class="content"><input value="请输入转让的用户"></div>
+                <div class="button"><button class="button-content">转让</button></div>
             </div>
         </div>
     </section>

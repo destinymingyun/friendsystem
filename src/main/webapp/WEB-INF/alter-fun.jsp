@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/static/css/head.css" type="text/css"/>
     <link rel="stylesheet" href="/static/css/footer.css" type="text/css"/>
     <link rel="stylesheet" href="/static/css/index-main.css" type="text/css"/>
+    <link rel="stylesheet" href="/static/css/tribe-box.css" type="text/css"/>
     <link rel="stylesheet" href="/static/css/alter-fun.css" type="text/css"/>
 
 
