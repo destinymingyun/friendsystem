@@ -103,7 +103,7 @@ public class LiteratureController {
      * @Date 17:22 22/3/2020
      * @version 3.4.24
     **/
-    @GetMapping("/get-literature-list")
+    @GetMapping("/get-discuss-list")
     public ArrayList<Discuss> getDiscussList(int literatureId) {
         return discussService.getDiscussList(literatureId);
     }
