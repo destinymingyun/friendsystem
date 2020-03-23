@@ -47,6 +47,25 @@
                 </div>
                 <a href="#">点击显示更多</a>
             </div>
+            <hr>
+            <div class="comment-header">
+            </div>
+            <div class="comment-content">
+                <div class="img"><img src="/static/img/male.png"></div>
+                <div class="textarea-container">
+                    <textarea class="comment-textarea" placeholder="请自觉遵守互联网相关的政策法规，严禁发布色情、暴力、反动的言论。"></textarea>
+                    <button type="submit" class="button" value="">发表评论</button>
+                </div>
+            </div>
+            <hr>
+               <div class="comment-list">
+                     <%--<div class="list-item">
+                         <div class="span"><span><a>comment_id</a></span></div>
+                         <p class="text">我讨厌做系统啊啊啊啊啊啊</p>
+                     </div>
+                   <hr>--%>
+            </div>
+
         </div>
         <div>
             <div class="author-box">
@@ -72,5 +91,20 @@
 
 </mian>
 <%@include file="/WEB-INF/public/footer.jsp" %>
+
+<script type="text/javascript" language="JavaScript" src="/webjars/jquery/3.4.1/dist/jquery.js"></script>
+<script type="text/javascript" language="JavaScript" src="/static/js/service/discussService.js"></script>
+<script type="text/javascript" language="JavaScript">
+    $(document).ready(function () {
+        var url=window.location.href;
+        var url = url.substr(40,10);
+        var literatureId =parseInt(url)
+        alert(literatureId);
+        getDiscussList(literatureId,function (list) {
+            findAllDiscuss(list);
+        })
+        });
+
+</script>
 </body>
 </html>

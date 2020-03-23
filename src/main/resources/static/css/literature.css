@@ -103,3 +103,79 @@ h1 {
 .discusses div:last-child {
     margin-left: 20px;
 }
+
+.comment-content {
+    width: 900px;
+    height: 100px;
+    background: #f4f4f4;
+/*    box-shadow: #707070 5px 5px 5px, white -2px -2px 1px;*/
+/*    border: #26c6da 2px solid;*/
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-content > .img{
+    width: 48px;
+    height: 48px;
+    border-radius:50%;
+    border: 1px solid black;
+    margin-right: 30px;
+}
+.comment-content > .img > img{
+    width: 48px;
+    height: 48px;
+    border-radius:50%;
+    border: 1px solid black;
+}
+.textarea-container{
+    width: 800px;
+    border-radius:10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.textarea-container  textarea{
+    width: 700px;
+    height: 50px;
+    border-radius:10px;
+    border: 1px solid black;
+}
+.textarea-container  button{
+    width: 70px;
+    height: 50px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #00a1d6;
+    border: 1px solid #00a1d6;
+    transition: .1s;
+    user-select: none;
+    outline: none;
+}
+
+.comment-list {
+    width: 900px;
+    height: 100px;
+/*    background: yellow;*/
+/*    background: #f4f4f4;*/
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*    border:1px solid #00a1d6;*/
+}
+.comment-list .list-item .span{
+    width: 700px;
+    height: 40px;
+ /*   background: #19abbd;*/
+}
+.comment-list .list-item p{
+    width: 700px;
+    height: 40px;
+/*    background: #19abbd;*/
+}
+
