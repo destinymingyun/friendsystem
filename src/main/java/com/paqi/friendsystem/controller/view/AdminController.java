@@ -45,4 +45,16 @@ public class AdminController {
     public String adminListerature() {
         return "/admin-literature";
     }
+
+
+    /**
+     * @author PQ
+     * @Description 发布页面
+     * @Date 23:08 20/3/2020
+     * @version 3.4.18
+     **/
+    @GetMapping("/admin-release")
+    public String adminRelease() {
+        return "/admin-release";
+    }
 }
