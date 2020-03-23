@@ -73,4 +73,15 @@ public class SystemAdminController {
     public boolean deleteActivity(int activityId) {
         return activityService.deleteActivity(activityId);
     }
+
+    /**
+     * @author PQ
+     * @Description 获取活动列表
+     * @Date 19:48 23/3/2020
+     * @version 3.4.26
+    **/
+    @GetMapping("/getActivity")
+    public ArrayList<Activity> getActivity() {
+        return activityService.selectAllActivity();
+    }
 }
