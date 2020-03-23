@@ -14,9 +14,9 @@
 **/
 function addActivity(activity, func) {
     $.ajax({
-        url: "/api/admin/status",
+        url: "/api/admin/add-activity",
         type: "POST",
-        data: data,
+        data: activity,
         success: function (boolean) {
             func(boolean);
         },
@@ -34,7 +34,7 @@ function addActivity(activity, func) {
 **/
 function getActivity(func) {
     $.ajax({
-        url: "/api/admin/getActivity",
+        url: "/api/admin/get-activity",
         type: "GET",
         success: function (boolean) {
             func(boolean);

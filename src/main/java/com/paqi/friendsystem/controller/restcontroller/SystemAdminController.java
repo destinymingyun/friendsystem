@@ -80,7 +80,7 @@ public class SystemAdminController {
      * @Date 19:48 23/3/2020
      * @version 3.4.26
     **/
-    @GetMapping("/getActivity")
+    @GetMapping("/get-activity")
     public ArrayList<Activity> getActivity() {
         return activityService.selectAllActivity();
     }
