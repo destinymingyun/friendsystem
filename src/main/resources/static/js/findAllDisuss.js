@@ -8,7 +8,7 @@ function findAllDiscuss(list) {
                 <div class="content"><p></p>
                      </div>
                 <hr>
-            `
+            `;
         $(".comment-list").append(comment)
     }
 }

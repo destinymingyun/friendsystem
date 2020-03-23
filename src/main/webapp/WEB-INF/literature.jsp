@@ -59,11 +59,17 @@
             </div>
             <hr>
                <div class="comment-list">
-                     <%--<div class="list-item">
-                         <div class="span"><span><a>comment_id</a></span></div>
-                         <p class="text">我讨厌做系统啊啊啊啊啊啊</p>
+                     <div class="list-item">
+                         <div class="span"><span>用户：<a>李四</a></span></div>
+                         <p class="text">如何称为一个灵魂有乐趣的人</p>
                      </div>
-                   <hr>--%>
+            </div>
+            <hr>
+            <div class="comment-list">
+                <div class="list-item">
+                    <div class="span"><span>用户：<a>王五</a></span></div>
+                    <p class="text">如何可以完成毕业设计，我太难了</p>
+                </div>
             </div>
 
         </div>
@@ -100,7 +106,8 @@
         var url = url.substr(40,10);
         var literatureId =parseInt(url)
         alert(literatureId);
-        getDiscussList(literatureId,function (list) {
+        getDiscussList({"literatureId": literatureId},function (list) {
+            console.log(list)
             findAllDiscuss(list);
         })
         });
