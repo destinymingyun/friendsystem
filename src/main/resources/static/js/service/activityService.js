@@ -36,8 +36,8 @@ function getActivity(func) {
     $.ajax({
         url: "/api/admin/get-activity",
         type: "GET",
-        success: function (boolean) {
-            func(boolean);
+        success: function (list) {
+            func(list);
         },
         error: function (msg) {
             console.log("发送失败");
