@@ -43,7 +43,7 @@ function writeDiscuss(discuss, func) {
 **/
 function getDiscussList(literatureId, func) {
     $.ajax({
-        url: "/api/literature/write-discuss",
+        url: "/api/literature/get-discuss-list",
         type: "GET",
         data: literatureId,
         success: function (list) {
