@@ -29,12 +29,30 @@
         </div>
         <section class="main-panel">
             <div class="release-box">
-                <div class="activities-theme"><input value="请输入要发布的标题"></div>
-                <div class="activities-content"><input value="请输入要发布的内容"></div>
+                <div class="activities-theme"><input id="theme" value="请输入要发布的标题"></div>
+                <div class="activities-content"><input id="content" value="请输入要发布的内容"></div>
+                <div class="activities-button"><input id="button" type="submit" value="提交"></div>
             </div>
         </section>
         <%@include file="/WEB-INF/public/footer.jsp" %>
     </main>
 </div>
+<script type="text/javascript" language="JavaScript" src="/webjars/jquery/3.4.1/dist/jquery.js"></script>
+<script type="text/javascript" language="JavaScript" src="/static/js/service/activityService.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        getActivity(function () {
+            alert("输出成功")
+        });
+        $(".activities-button").click(function () {
+            var name = $("#theme").val();
+            var context = $("#content").val();
+            var activities = {"name": name, "context": context}
+            addActivity(activities,function () {
+                alert("添加成功")
+            });
+        });
+    });
+</script>
 </body>
 </html>
