@@ -66,3 +66,25 @@ function changeLiteratureStatus(data, func) {
         }
     })
 }
+
+/**
+ * @author PQ
+ * @Description 写文章
+ * @param literature: {"title": title, "context": context}
+ * @param func: func(boolean)添加成功返回true，否则返回falsze
+ * @Date 23:20 23/3/2020
+ * @version 3.4.25
+**/
+function writeLiterature(literature, func) {
+    $.ajax({
+        url: "/api/literature/write",
+        type: "POST",
+        data: data,
+        success: function (boolean) {
+            func(boolean);
+        },
+        error: function (msg) {
+            console.log("发送失败");
+        }
+    })
+}

@@ -19,7 +19,7 @@
     </properties>
 
     <dependencies>
-<!--*****  V1.0 项目基本框架 ****************************************************************************-->
+        <!--*****  V1.0 项目基本框架 ****************************************************************************-->
         <!--  spring-boot基本类      -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -37,7 +37,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-<!--*****  V1.1  web框架****************************************************************************-->
+        <!--*****  V1.1  web框架****************************************************************************-->
         <!--  spring-boot-web默认内嵌tomcat    -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -55,7 +55,7 @@
             <artifactId>jstl</artifactId>
             <scope>compile</scope>
         </dependency>
-<!--*****  V1.2 数据库框架 ****************************************************************************-->
+        <!--*****  V1.2 数据库框架 ****************************************************************************-->
         <!--mysql连接器-->
         <dependency>
             <groupId>mysql</groupId>
@@ -75,26 +75,26 @@
             <version>1.18.12</version>
             <scope>provided</scope>
         </dependency>
-<!--*****  V2.2.1  热部署开发****************************************************************************-->
+        <!--*****  V2.2.1  热部署开发****************************************************************************-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <version>2.2.5.RELEASE</version>
             <optional>true</optional>
         </dependency>
-<!--*****  V2.3.1  jquery****************************************************************************-->
+        <!--*****  V2.3.1  jquery****************************************************************************-->
         <dependency>
             <groupId>org.webjars.bower</groupId>
             <artifactId>jquery</artifactId>
             <version>3.4.1</version>
         </dependency>
-<!--*****  V3.4.11  前后端交互fast-json****************************************************************************-->
+        <!--*****  V3.4.11  前后端交互fast-json****************************************************************************-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.66</version>
         </dependency>
-<!-- V3.4.13 分页查询********************************************************************************************* -->
+        <!-- V3.4.13 分页查询********************************************************************************************* -->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
