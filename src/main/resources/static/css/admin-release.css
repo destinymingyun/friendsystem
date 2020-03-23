@@ -1,0 +1,41 @@
+.release-box{
+    background: #8590a6;
+    width: 800px;
+    height: 600px;
+    margin:30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom:1px solid black;
+    border-radius: 20px;
+
+}
+.activities-theme{
+    width: 600px;
+    height: 60px;
+    background: #19abbd;
+    border:1px solid black;
+}
+.activities-theme input{
+    width: 600px;
+    height: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.activities-content{
+    width: 600px;
+    height: 500px;
+    background: #19abbd;
+    border:1px solid black;
+}
+.activities-content input{
+    width: 600px;
+    height: 500px;
+    border:1px solid black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+
+}
