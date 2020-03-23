@@ -33,7 +33,7 @@ function writeDiscuss(discuss, func) {
 
 /**
  * @author PQ
- * @Description 根据文章id获取文章list
+ * @Description 根据文章id获取评论list
  * @param：literatureId: {
  *     "literatureId": literatureId
  * }
