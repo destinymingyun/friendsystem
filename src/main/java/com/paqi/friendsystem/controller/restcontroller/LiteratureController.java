@@ -36,7 +36,9 @@ public class LiteratureController {
     @PostMapping("/write")
     public int write(Literature literature, HttpServletRequest httpServletRequest) {
         literature.setCreateTime(new Date());
-        Account account = (Account)(httpServletRequest.getSession().getAttribute("account"));
+//        Account account = (Account)(httpServletRequest.getSession().getAttribute("account"));
+        Account account = new Account();
+        account.setUserId(5);
         literature.setAuthorId(account.getUserId());
         literatureService.addLiterature(literature);
         return 1;
