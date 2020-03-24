@@ -40,6 +40,8 @@ function getFunInfo(funId, num, name) {
             </div>
             </article>`;
             $("#literature-box").append(str);
+
+
         }
     })
 }
