@@ -52,6 +52,7 @@
                     <div class="essay-content">
                         <label class="essay-content-input">
                             <textarea class="input2" placeholder="请输入正文"></textarea>
+                            <button class="button">提交</button>
                         </label>
                     </div>
                 </div>
@@ -61,5 +62,19 @@
     <%@include file="/WEB-INF/public/footer.jsp" %>
 </main>
 <script type="text/javascript" src="/webjars/jquery/3.4.1/dist/jquery.js"></script>
+<script type="text/javascript" src="/static/service/literatureService.js"></script>
+<script type="text/javascript" src="/static/literature-write.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var title = $(".input1").var();
+        var context = $(".input2").var();
+        var literature = {"title": title, "context": context}
+        writeLiterature(literature,function () {
+            $(".button").click(function () {
+                addLiteratureButton(title)
+            })
+        })
+    })
+</script>
 </body>
 </html>
