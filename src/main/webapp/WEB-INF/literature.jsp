@@ -31,22 +31,21 @@
             <div class="context">
                 <p>${literature.context}</p>
             </div>
-            <hr>
-            <div class="discuss-box">
-                <div class="discuss-box-title">
-                    <h2>评论区</h2>
-                    <a href="#">说说我自己的看法</a>
-                </div>
-                <div class="discusses">
-                    <div class="discuss-title">
-                        <h4>张三</h4>
-                        <div>发表时间: 2019-12-22</div>
-                    </div>
-                    <hr>
-                    <div>这篇文章真的很不错</div>
-                </div>
-                <a href="#">点击显示更多</a>
-            </div>
+<%--            <div class="discuss-box">--%>
+<%--            <div class="discuss-box-title">--%>
+<%--                <h2>评论区</h2>--%>
+<%--                <a href="#">说说我自己的看法</a>--%>
+<%--            </div>--%>
+<%--            &lt;%&ndash;                <div class="discusses">&ndash;%&gt;--%>
+<%--            &lt;%&ndash;                    <div class="discuss-title">&ndash;%&gt;--%>
+<%--            &lt;%&ndash;                        <h4>张三</h4>&ndash;%&gt;--%>
+<%--            &lt;%&ndash;                        <div>发表时间: 2019-12-22</div>&ndash;%&gt;--%>
+<%--            &lt;%&ndash;                    </div>&ndash;%&gt;--%>
+<%--            &lt;%&ndash;                    <hr>&ndash;%&gt;--%>
+<%--            &lt;%&ndash;                    <div>这篇文章真的很不错</div>&ndash;%&gt;--%>
+<%--            &lt;%&ndash;                </div>&ndash;%&gt;--%>
+<%--            <a href="#">点击显示更多</a>--%>
+<%--        </div>--%>
             <hr>
             <div class="comment-header">
             </div>
@@ -72,19 +71,19 @@
             <div class="author-box">
                 <h2>作者信息</h2>
                 <h3>
-                    昵称: ${userInfo.userName}
+                    昵称: ${authorInfo.userName}
                 </h3>
                 <h3>
-                    性别: ${userInfo.sex==0?"女":"男"}
+                    性别: ${authorInfo.sex==0?"女":"男"}
                 </h3>
                 <h3>
-                    年龄: ${userInfo.age}
+                    年龄: ${authorInfo.age}
                 </h3>
                 <h3>
-                    爱好: ${userInfo.hobby}
+                    爱好: ${authorInfo.hobby}
                 </h3>
                 <h3>
-                    简介: ${userInfo.introduction}
+                    简介: ${authorInfo.introduction}
                 </h3>
             </div>
         </div>

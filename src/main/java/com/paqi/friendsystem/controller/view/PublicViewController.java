@@ -51,6 +51,8 @@ public class PublicViewController {
         literature1.setTitle("页面出错啦！！！");
         literature1.setContext("该话题不存在或您无权访问，请登录后试试？");
 //        Account account = (Account)(httpServletRequest.getSession().getAttribute("account"));
+        UserInfo authorInfo = userInfoMapper.getUserInfoById(literature.getAuthorId());
+        modelAndView.addObject("authorInfo", authorInfo);
         Account account = new Account();
         account.setUserType(2);
         account.setUserType(2);
