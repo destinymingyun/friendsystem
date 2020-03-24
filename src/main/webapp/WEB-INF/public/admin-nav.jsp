@@ -33,8 +33,8 @@
         </div>
         <div class="sub-nav">
             <li>活动管理</li>
-            <a href="">
-                <li>正在进行活动</li>
+            <a href="/admin/admin-release">
+                <li>发布活动</li>
             </a>
             <a href="">
                 <li>活动管理</li>
